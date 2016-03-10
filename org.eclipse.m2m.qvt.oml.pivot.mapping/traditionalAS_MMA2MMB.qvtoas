@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qvtoperational.expr:OperationalTransformation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eimpocl="http://www.eclipse.org/qvt/1.0/ImperativeOCL" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore"
+    xmlns:qvtoperational.expr="http://www.eclipse.org/qvt/1.0.0/Operational/Expressions" xsi:schemaLocation="http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage http://www.eclipse.org/qvt/1.0/ImperativeOCL java://org.eclipse.m2m.qvt.oml.ecore.ImperativeOCL.ImperativeOCLPackage http://www.eclipse.org/ocl/1.1.0/Ecore java://org.eclipse.ocl.ecore.EcorePackage http://www.eclipse.org/qvt/1.0.0/Operational/Expressions java://org.eclipse.m2m.internal.qvt.oml.expressions.ExpressionsPackage"
+    name="MMATransformation" instanceClassName="org.eclipse.m2m.internal.qvt.oml.evaluator.TransformationInstance"
+    eSuperTypes="http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Transformation" nsPrefix="MMATransformation" entry="traditionalAS_MMA2MMB.qvtoas#//main"
+    usedModelType="traditionalAS_MMA2MMB.qvtoas#//MMA traditionalAS_MMA2MMB.qvtoas#//MMB traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE"
+    intermediateClass="traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1/IntermediateMod" intermediateProperty="qvtoperational.expr:ContextualProperty traditionalAS_MMA2MMB.qvtoas#//intermediateMods">
+  <eOperations xsi:type="qvtoperational.expr:EntryOperation" name="main" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid">
+    <body>
+      <content xsi:type="eimpocl:ImperativeIterateExp" name="xcollect" eType="ocl.ecore:BagType traditionalAS_MMA2MMB.qvtoas#//Bag(Model)">
+        <source xsi:type="eimpocl:ImperativeIterateExp" name="xselect" eType="ocl.ecore:SetType traditionalAS_MMA2MMB.qvtoas#//Set(Project)">
+          <source xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:SetType traditionalAS_MMA2MMB.qvtoas#//Set(Element)" referredOperation="ecore:EOperation http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Model/rootObjects">
+            <source xsi:type="ocl.ecore:VariableExp" name="Source" eType="qvtoperational.expr:ModelType traditionalAS_MMA2MMB.qvtoas#//MMA"
+                referredVariable="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+          </source>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp1" eType="ecore:EClass http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Element"/>
+          <condition xsi:type="ocl.ecore:TypeExp" eType="ocl.ecore:TypeType traditionalAS_MMA2MMB.qvtoas#//Project" referredType="ecore:EClass http://mma/1.0#//Project"/>
+        </source>
+        <body xsi:type="qvtoperational.expr:MappingCallExp" eType="ecore:EClass http://mmb/1.0#//Model" referredOperation="qvtoperational.expr:MappingOperation traditionalAS_MMA2MMB.qvtoas#//ProjectToModel">
+          <source xsi:type="ocl.ecore:VariableExp" name="temp2" eType="ecore:EClass http://mma/1.0#//Project" referredVariable="traditionalAS_MMA2MMB.qvtoas#//main/@body/@content.0/temp2"/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="temp2" eType="ecore:EClass http://mma/1.0#//Project"/>
+      </content>
+    </body>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:Helper" name="ModificationsQuery" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)">
+    <eParameters xsi:type="qvtoperational.expr:VarParameter" name="Updates" eType="ecore:EClass http://mma/1.0#//Update" representedParameter="qvtoperational.expr:VarParameter traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery/Updates"/>
+    <body>
+      <content xsi:type="eimpocl:VariableInitExp" name="Modifications" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)">
+        <referredVariable name="Modifications" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)"/>
+      </content>
+      <content xsi:type="eimpocl:ForExp" name="forEach" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid">
+        <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Variable)"
+            referredProperty="ecore:EReference http://mma/1.0#//Update/variables">
+          <source xsi:type="ocl.ecore:VariableExp" name="Updates" eType="ecore:EClass http://mma/1.0#//Update" referredVariable="traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery/Updates"/>
+        </source>
+        <body xsi:type="eimpocl:BlockExp" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid">
+          <body xsi:type="eimpocl:AssignExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)"
+              isReset="false">
+            <left xsi:type="ocl.ecore:VariableExp" name="Modifications" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)"
+                referredVariable="traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery/@body/@content.0/Modifications"/>
+            <value xsi:type="qvtoperational.expr:ObjectExp" name="$temp_1" eType="ecore:EClass http://mmb/1.0#//Modification" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+                instantiatedClass="http://mmb/1.0#//Modification" referredObject="traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery/@body/@content.1/%.1/%/$temp_1/@body/@variable.0">
+              <body>
+                <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                    isReset="true">
+                  <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                      referredProperty="ecore:EAttribute http://mmb/1.0#//Modification/VarName">
+                    <source xsi:type="ocl.ecore:VariableExp" name="$temp_1" eType="ecore:EClass http://mmb/1.0#//Modification" referredVariable="traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery/@body/@content.1/%.1/%/$temp_1/@body/@variable.0"/>
+                  </left>
+                  <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                      referredProperty="ecore:EAttribute http://mma/1.0#//Variable/Name">
+                    <source xsi:type="ocl.ecore:VariableExp" name="Var" eType="ecore:EClass http://mma/1.0#//Variable" referredVariable="traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery/@body/@content.1/Var"/>
+                  </value>
+                </content>
+                <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                    isReset="true">
+                  <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                      referredProperty="ecore:EAttribute http://mmb/1.0#//Modification/VarType">
+                    <source xsi:type="ocl.ecore:VariableExp" name="$temp_1" eType="ecore:EClass http://mmb/1.0#//Modification" referredVariable="traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery/@body/@content.1/%.1/%/$temp_1/@body/@variable.0"/>
+                  </left>
+                  <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                      referredProperty="ecore:EAttribute http://mma/1.0#//Variable/Type">
+                    <source xsi:type="ocl.ecore:VariableExp" name="Var" eType="ecore:EClass http://mma/1.0#//Variable" referredVariable="traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery/@body/@content.1/Var"/>
+                  </value>
+                </content>
+                <variable name="$temp_1" eType="ecore:EClass http://mmb/1.0#//Modification"/>
+              </body>
+            </value>
+          </body>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="Var" eType="ecore:EClass http://mma/1.0#//Variable"/>
+      </content>
+      <content xsi:type="eimpocl:ReturnExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)">
+        <value xsi:type="ocl.ecore:VariableExp" name="Modifications" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)"
+            referredVariable="traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery/@body/@content.0/Modifications"/>
+      </content>
+    </body>
+    <result name="result" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)" representedParameter="qvtoperational.expr:VarParameter traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery/result"
+        kind="out"/>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="ProjectToModel" eType="ecore:EClass http://mmb/1.0#//Model">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http://mmb/1.0#//Model" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+          instantiatedClass="http://mmb/1.0#//Model" referredObject="traditionalAS_MMA2MMB.qvtoas#//ProjectToModel/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Model/Name">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Model" referredVariable="traditionalAS_MMA2MMB.qvtoas#//ProjectToModel/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Project/Title">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Project" referredVariable="traditionalAS_MMA2MMB.qvtoas#//ProjectToModel/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Automaton).1"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Automaton).1"
+                referredProperty="ecore:EReference http://mmb/1.0#//Model/automata">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Model" referredVariable="traditionalAS_MMA2MMB.qvtoas#//ProjectToModel/result"/>
+            </left>
+            <value xsi:type="eimpocl:ImperativeIterateExp" name="xcollect" eType="ocl.ecore:SequenceType traditionalAS_MMA2MMB.qvtoas#//Sequence(Automaton)">
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Automaton)"
+                  referredProperty="ecore:EReference http://mma/1.0#//Project/bodies">
+                <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Project" referredVariable="traditionalAS_MMA2MMB.qvtoas#//ProjectToModel/self"/>
+              </source>
+              <body xsi:type="qvtoperational.expr:MappingCallExp" eType="ecore:EClass http://mmb/1.0#//Automaton" referredOperation="qvtoperational.expr:MappingOperation traditionalAS_MMA2MMB.qvtoas#//toAutomaton">
+                <source xsi:type="ocl.ecore:VariableExp" name="temp1" eType="ecore:EClass http://mma/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//ProjectToModel/@body/@content.0/@body/@content.1/xcollect/temp1"/>
+              </body>
+              <iterator xsi:type="ocl.ecore:Variable" name="temp1" eType="ecore:EClass http://mma/1.0#//Automaton"/>
+            </value>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Project" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//ProjectToModel/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http://mmb/1.0#//Model" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//ProjectToModel/result"
+        kind="out" extent="traditionalAS_MMA2MMB.qvtoas#//Target"/>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="toAutomaton" eType="ecore:EClass http://mmb/1.0#//Automaton">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http://mmb/1.0#//Automaton" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+          instantiatedClass="http://mmb/1.0#//Automaton" referredObject="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Automaton/Name">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Automaton/Name">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Mode)" isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Mode)"
+                referredProperty="ecore:EReference http://mmb/1.0#//Automaton/modes">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/result"/>
+            </left>
+            <value xsi:type="eimpocl:ImperativeIterateExp" name="xcollect" eType="ocl.ecore:SequenceType traditionalAS_MMA2MMB.qvtoas#//Sequence(Mode)">
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Location)"
+                  referredProperty="ecore:EReference http://mma/1.0#//Automaton/locations">
+                <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/self"/>
+              </source>
+              <body xsi:type="qvtoperational.expr:MappingCallExp" eType="ecore:EClass http://mmb/1.0#//Mode" referredOperation="qvtoperational.expr:MappingOperation traditionalAS_MMA2MMB.qvtoas#//toMode">
+                <source xsi:type="ocl.ecore:VariableExp" name="temp1" eType="ecore:EClass http://mma/1.0#//Location" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/@body/@content.0/@body/@content.1/xcollect/temp1"/>
+              </body>
+              <iterator xsi:type="ocl.ecore:Variable" name="temp1" eType="ecore:EClass http://mma/1.0#//Location"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Transition)"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Transition)"
+                referredProperty="ecore:EReference http://mmb/1.0#//Automaton/transistions">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/result"/>
+            </left>
+            <value xsi:type="eimpocl:ImperativeIterateExp" name="xcollect" eType="ocl.ecore:SequenceType traditionalAS_MMA2MMB.qvtoas#//Sequence(Transition)">
+              <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="ocl.ecore:SequenceType traditionalAS_MMA2MMB.qvtoas#//Sequence(Edge)">
+                <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Location)"
+                    referredProperty="ecore:EReference http://mma/1.0#//Automaton/locations">
+                  <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/self"/>
+                </source>
+                <body xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Edge)"
+                    referredProperty="ecore:EReference http://mma/1.0#//Location/outgoingEdges">
+                  <source xsi:type="ocl.ecore:VariableExp" name="temp2" eType="ecore:EClass http://mma/1.0#//Location" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/@body/@content.0/@body/@content.2/xcollect/collect/temp2"/>
+                </body>
+                <iterator xsi:type="ocl.ecore:Variable" name="temp2" eType="ecore:EClass http://mma/1.0#//Location"/>
+              </source>
+              <body xsi:type="qvtoperational.expr:MappingCallExp" eType="ecore:EClass http://mmb/1.0#//Transition" referredOperation="qvtoperational.expr:MappingOperation traditionalAS_MMA2MMB.qvtoas#//toTransition">
+                <source xsi:type="ocl.ecore:VariableExp" name="temp3" eType="ecore:EClass http://mma/1.0#//Edge" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/@body/@content.0/@body/@content.2/xcollect/temp3"/>
+              </body>
+              <iterator xsi:type="ocl.ecore:Variable" name="temp3" eType="ecore:EClass http://mma/1.0#//Edge"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:TryExp">
+            <exceptClause exception="ecore:EClass http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Exception">
+              <body xsi:type="eimpocl:BlockExp" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid">
+                <body xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                    isReset="true">
+                  <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                      referredProperty="ecore:EAttribute http://mmb/1.0#//Automaton/Name">
+                    <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/result"/>
+                  </left>
+                  <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                      referredProperty="ecore:EAttribute http://mma/1.0#//Automaton/Name">
+                    <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/self"/>
+                  </value>
+                </body>
+              </body>
+            </exceptClause>
+            <tryBody xsi:type="eimpocl:BlockExp" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid">
+              <body xsi:type="eimpocl:AssignExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Transition)"
+                  isReset="true">
+                <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Transition)"
+                    referredProperty="ecore:EReference http://mmb/1.0#//Automaton/transistions">
+                  <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/result"/>
+                </left>
+                <value xsi:type="eimpocl:ImperativeIterateExp" name="xcollect" eType="ocl.ecore:SequenceType traditionalAS_MMA2MMB.qvtoas#//Sequence(Transition)">
+                  <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="ocl.ecore:SequenceType traditionalAS_MMA2MMB.qvtoas#//Sequence(Edge)">
+                    <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Location)"
+                        referredProperty="ecore:EReference http://mma/1.0#//Automaton/locations">
+                      <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/self"/>
+                    </source>
+                    <body xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Edge)"
+                        referredProperty="ecore:EReference http://mma/1.0#//Location/outgoingEdges">
+                      <source xsi:type="ocl.ecore:VariableExp" name="temp4" eType="ecore:EClass http://mma/1.0#//Location" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/@body/@content.0/@body/@content.3/%.1/%/xcollect/collect/temp4"/>
+                    </body>
+                    <iterator xsi:type="ocl.ecore:Variable" name="temp4" eType="ecore:EClass http://mma/1.0#//Location"/>
+                  </source>
+                  <body xsi:type="qvtoperational.expr:MappingCallExp" eType="ecore:EClass http://mmb/1.0#//Transition" referredOperation="qvtoperational.expr:MappingOperation traditionalAS_MMA2MMB.qvtoas#//toTransition">
+                    <source xsi:type="ocl.ecore:VariableExp" name="temp5" eType="ecore:EClass http://mma/1.0#//Edge" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/@body/@content.0/@body/@content.3/%.1/%/xcollect/temp5"/>
+                  </body>
+                  <iterator xsi:type="ocl.ecore:Variable" name="temp5" eType="ecore:EClass http://mma/1.0#//Edge"/>
+                </value>
+              </body>
+            </tryBody>
+          </content>
+          <content xsi:type="eimpocl:WhileExp" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid">
+            <body xsi:type="eimpocl:BlockExp" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid">
+              <body xsi:type="eimpocl:SwitchExp" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid">
+                <alternativePart>
+                  <body xsi:type="eimpocl:BlockExp" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid">
+                    <body xsi:type="eimpocl:LogExp" name="log">
+                      <argument xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                          referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/+">
+                        <source xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                            stringSymbol="Name of the Automaton: "/>
+                        <argument xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                            referredProperty="ecore:EAttribute http://mmb/1.0#//Automaton/Name">
+                          <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/result"/>
+                        </argument>
+                      </argument>
+                    </body>
+                    <body xsi:type="eimpocl:BreakExp"/>
+                  </body>
+                  <condition xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+                      referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E.1">
+                    <source xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+                        referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size">
+                      <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Location)"
+                          referredProperty="ecore:EReference http://mma/1.0#//Automaton/locations">
+                        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/self"/>
+                      </source>
+                    </source>
+                    <argument xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+                        referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/-.1">
+                      <source xsi:type="ocl.ecore:IntegerLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+                          integerSymbol="1"/>
+                    </argument>
+                  </condition>
+                </alternativePart>
+              </body>
+              <body xsi:type="eimpocl:ContinueExp"/>
+              <body xsi:type="eimpocl:AssertExp" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid"
+                  severity="fatal">
+                <assertion xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+                    referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/%3C%3E.2">
+                  <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Location)"
+                      referredProperty="ecore:EReference http://mma/1.0#//Automaton/locations">
+                    <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/self"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:NullLiteralExp" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid"/>
+                </assertion>
+              </body>
+            </body>
+            <condition xsi:type="ocl.ecore:BooleanLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+                booleanSymbol="true"/>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Automaton" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//toAutomaton/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http://mmb/1.0#//Automaton" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//toAutomaton/result"
+        kind="out" extent="traditionalAS_MMA2MMB.qvtoas#//Target"/>
+    <when xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+        referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/startsWith">
+      <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+          referredProperty="ecore:EAttribute http://mma/1.0#//Automaton/Name">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Automaton" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toAutomaton/self"/>
+      </source>
+      <argument xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+          stringSymbol="A"/>
+    </when>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="toMode" eType="ecore:EClass http://mmb/1.0#//Mode" disjunct="traditionalAS_MMA2MMB.qvtoas#//fromRectangle traditionalAS_MMA2MMB.qvtoas#//fromEllipse traditionalAS_MMA2MMB.qvtoas#//fromTriangle1 traditionalAS_MMA2MMB.qvtoas#//fromTriangle2">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+          instantiatedClass="http://mmb/1.0#//Mode" referredObject="traditionalAS_MMA2MMB.qvtoas#//toMode/result">
+        <body>
+          <content xsi:type="eimpocl:LogExp" name="log">
+            <argument xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                stringSymbol="This log is never reached, disjunct mappings don't use their body."/>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Location" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//toMode/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//toMode/result"
+        kind="out" extent="traditionalAS_MMA2MMB.qvtoas#//Target"/>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="fromRectangle" eType="ecore:EClass http://mmb/1.0#//Mode" inherited="traditionalAS_MMA2MMB.qvtoas#//Updates">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+          instantiatedClass="http://mmb/1.0#//Mode" referredObject="traditionalAS_MMA2MMB.qvtoas#//fromRectangle/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Mode/Shape">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" referredVariable="traditionalAS_MMA2MMB.qvtoas#//fromRectangle/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                stringSymbol="Rectangle"/>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Mode/Dimension">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" referredVariable="traditionalAS_MMA2MMB.qvtoas#//fromRectangle/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Rectangle/Edge">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Rectangle" referredVariable="traditionalAS_MMA2MMB.qvtoas#//fromRectangle/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:LogExp" name="log">
+            <argument xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                stringSymbol="Re"/>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Rectangle" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//fromRectangle/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//fromRectangle/result"
+        kind="out" extent="traditionalAS_MMA2MMB.qvtoas#//Target"/>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="fromEllipse" eType="ecore:EClass http://mmb/1.0#//Mode" inherited="traditionalAS_MMA2MMB.qvtoas#//Updates">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+          instantiatedClass="http://mmb/1.0#//Mode" referredObject="traditionalAS_MMA2MMB.qvtoas#//fromEllipse/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Mode/Shape">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" referredVariable="traditionalAS_MMA2MMB.qvtoas#//fromEllipse/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                stringSymbol="Ellipse"/>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Mode/Dimension">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" referredVariable="traditionalAS_MMA2MMB.qvtoas#//fromEllipse/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Ellipse/Radius">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Ellipse" referredVariable="traditionalAS_MMA2MMB.qvtoas#//fromEllipse/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:LogExp" name="log">
+            <argument xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                stringSymbol="El"/>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Ellipse" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//fromEllipse/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//fromEllipse/result"
+        kind="out" extent="traditionalAS_MMA2MMB.qvtoas#//Target"/>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="fromTriangle1" eType="ecore:EClass http://mmb/1.0#//Mode" inherited="traditionalAS_MMA2MMB.qvtoas#//Updates">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+          instantiatedClass="http://mmb/1.0#//Mode" referredObject="traditionalAS_MMA2MMB.qvtoas#//fromTriangle1/result">
+        <body>
+          <content xsi:type="eimpocl:LogExp" name="log">
+            <argument xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                stringSymbol="Tr1"/>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Triangle" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//fromTriangle1/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//fromTriangle1/result"
+        kind="out" extent="traditionalAS_MMA2MMB.qvtoas#//Target"/>
+    <when xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+        referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/=">
+      <source xsi:type="ocl.ecore:IntegerLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+          integerSymbol="1"/>
+      <argument xsi:type="ocl.ecore:IntegerLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+          integerSymbol="2"/>
+    </when>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="fromTriangle2" eType="ecore:EClass http://mmb/1.0#//Mode" inherited="traditionalAS_MMA2MMB.qvtoas#//Updates">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+          instantiatedClass="http://mmb/1.0#//Mode" referredObject="traditionalAS_MMA2MMB.qvtoas#//fromTriangle2/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Mode/Shape">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" referredVariable="traditionalAS_MMA2MMB.qvtoas#//fromTriangle2/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                stringSymbol="Triangle"/>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Mode/Dimension">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" referredVariable="traditionalAS_MMA2MMB.qvtoas#//fromTriangle2/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Triangle/Side">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Triangle" referredVariable="traditionalAS_MMA2MMB.qvtoas#//fromTriangle2/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:LogExp" name="log">
+            <argument xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                stringSymbol="Tr2"/>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Triangle" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//fromTriangle2/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//fromTriangle2/result"
+        kind="out" extent="traditionalAS_MMA2MMB.qvtoas#//Target"/>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="Updates" eType="ecore:EClass http://mmb/1.0#//Mode">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+          instantiatedClass="http://mmb/1.0#//Mode" referredObject="traditionalAS_MMA2MMB.qvtoas#//Updates/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Mode/Name">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" referredVariable="traditionalAS_MMA2MMB.qvtoas#//Updates/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Location/Name">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Location" referredVariable="traditionalAS_MMA2MMB.qvtoas#//Updates/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Mode/InitialState">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" referredVariable="traditionalAS_MMA2MMB.qvtoas#//Updates/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Location/IsInitial">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Location" referredVariable="traditionalAS_MMA2MMB.qvtoas#//Updates/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)"
+                referredProperty="ecore:EReference http://mmb/1.0#//Mode/Modifications">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" referredVariable="traditionalAS_MMA2MMB.qvtoas#//Updates/result"/>
+            </left>
+            <value xsi:type="qvtoperational.expr:ImperativeCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)"
+                referredOperation="qvtoperational.expr:Helper traditionalAS_MMA2MMB.qvtoas#//ModificationsQuery">
+              <source xsi:type="ocl.ecore:VariableExp" name="this" eType="qvtoperational.expr:OperationalTransformation traditionalAS_MMA2MMB.qvtoas#/"
+                  referredVariable="traditionalAS_MMA2MMB.qvtoas#//this"/>
+              <argument xsi:type="ocl.ecore:PropertyCallExp" eType="ecore:EClass http://mma/1.0#//Update" referredProperty="ecore:EReference http://mma/1.0#//Location/updates">
+                <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Location" referredVariable="traditionalAS_MMA2MMB.qvtoas#//Updates/self"/>
+              </argument>
+            </value>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Location" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//Updates/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http://mmb/1.0#//Mode" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//Updates/result"
+        kind="out" extent="traditionalAS_MMA2MMB.qvtoas#//Target"/>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="toIntermediateMod" eType="ecore:EClass traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1/IntermediateMod">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1/IntermediateMod"
+          instantiatedClass="traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1/IntermediateMod" referredObject="traditionalAS_MMA2MMB.qvtoas#//toIntermediateMod/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+                referredProperty="ecore:EAttribute traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1/IntermediateMod/Urgent">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1/IntermediateMod"
+                  referredVariable="traditionalAS_MMA2MMB.qvtoas#//toIntermediateMod/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Update/Urgent">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Update" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toIntermediateMod/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)"
+                referredProperty="ecore:EAttribute traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1/IntermediateMod/vars">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1/IntermediateMod"
+                  referredVariable="traditionalAS_MMA2MMB.qvtoas#//toIntermediateMod/result"/>
+            </left>
+            <value xsi:type="eimpocl:ImperativeIterateExp" name="xcollect" eType="ocl.ecore:SequenceType traditionalAS_MMA2MMB.qvtoas#//Sequence(Modification)">
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Variable)"
+                  referredProperty="ecore:EReference http://mma/1.0#//Update/variables">
+                <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Update" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toIntermediateMod/self"/>
+              </source>
+              <body xsi:type="qvtoperational.expr:MappingCallExp" eType="ecore:EClass http://mmb/1.0#//Modification" referredOperation="qvtoperational.expr:MappingOperation traditionalAS_MMA2MMB.qvtoas#//VarToMod">
+                <source xsi:type="ocl.ecore:VariableExp" name="temp1" eType="ecore:EClass http://mma/1.0#//Variable" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toIntermediateMod/@body/@content.0/@body/@content.1/xcollect/temp1"/>
+              </body>
+              <iterator xsi:type="ocl.ecore:Variable" name="temp1" eType="ecore:EClass http://mma/1.0#//Variable"/>
+            </value>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Update" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//toIntermediateMod/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1/IntermediateMod"
+        representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//toIntermediateMod/result" kind="out"/>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="VarToMod" eType="ecore:EClass http://mmb/1.0#//Modification">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http://mmb/1.0#//Modification" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+          instantiatedClass="http://mmb/1.0#//Modification" referredObject="traditionalAS_MMA2MMB.qvtoas#//VarToMod/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Modification/VarName">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Modification" referredVariable="traditionalAS_MMA2MMB.qvtoas#//VarToMod/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Variable/Name">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Variable" referredVariable="traditionalAS_MMA2MMB.qvtoas#//VarToMod/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Modification/VarType">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Modification" referredVariable="traditionalAS_MMA2MMB.qvtoas#//VarToMod/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Variable/Type">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Variable" referredVariable="traditionalAS_MMA2MMB.qvtoas#//VarToMod/self"/>
+            </value>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Variable" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//VarToMod/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http://mmb/1.0#//Modification" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//VarToMod/result"
+        kind="out" extent="traditionalAS_MMA2MMB.qvtoas#//Target"/>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="toTransition" eType="ecore:EClass http://mmb/1.0#//Transition">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http://mmb/1.0#//Transition" extent="traditionalAS_MMA2MMB.qvtoas#//Target"
+          instantiatedClass="http://mmb/1.0#//Transition" referredObject="traditionalAS_MMA2MMB.qvtoas#//toTransition/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mmb/1.0#//Transition/Event">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Transition" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toTransition/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http://mma/1.0#//Edge/Action">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Edge" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toTransition/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ecore:EClass http://mmb/1.0#//Mode" isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ecore:EClass http://mmb/1.0#//Mode" referredProperty="ecore:EReference http://mmb/1.0#//Transition/sourceMode">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Transition" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toTransition/result"/>
+            </left>
+            <value xsi:type="qvtoperational.expr:ResolveExp" eType="ecore:EClass http://mmb/1.0#//Mode" one="true">
+              <source xsi:type="ocl.ecore:OperationCallExp" eType="ecore:EClass http://mma/1.0#//Location" referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType">
+                <source xsi:type="ocl.ecore:OperationCallExp" eType="ecore:EClass http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Element"
+                    referredOperation="ecore:EOperation http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Element/container">
+                  <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Edge" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toTransition/self"/>
+                </source>
+                <argument xsi:type="ocl.ecore:TypeExp" eType="ocl.ecore:TypeType traditionalAS_MMA2MMB.qvtoas#//Location" referredType="ecore:EClass http://mma/1.0#//Location"/>
+              </source>
+              <target name="Mode" eType="ecore:EClass http://mmb/1.0#//Mode"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ecore:EClass http://mmb/1.0#//Mode" isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ecore:EClass http://mmb/1.0#//Mode" referredProperty="ecore:EReference http://mmb/1.0#//Transition/targetMode">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http://mmb/1.0#//Transition" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toTransition/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:OperationCallExp" eType="ecore:EClass http://mmb/1.0#//Mode" referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/at">
+              <source xsi:type="qvtoperational.expr:ResolveExp" eType="ocl.ecore:SequenceType traditionalAS_MMA2MMB.qvtoas#//Sequence(Mode)">
+                <source xsi:type="ocl.ecore:PropertyCallExp" eType="ecore:EClass http://mma/1.0#//Location" referredProperty="ecore:EReference http://mma/1.0#//Edge/targetLocation">
+                  <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http://mma/1.0#//Edge" referredVariable="traditionalAS_MMA2MMB.qvtoas#//toTransition/self"/>
+                </source>
+                <target name="Mode" eType="ecore:EClass http://mmb/1.0#//Mode"/>
+              </source>
+              <argument xsi:type="ocl.ecore:IntegerLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+                  integerSymbol="1"/>
+            </value>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http://mma/1.0#//Edge" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//toTransition/self"
+        extent="traditionalAS_MMA2MMB.qvtoas#//Source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http://mmb/1.0#//Transition" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_MMA2MMB.qvtoas#//toTransition/result"
+        kind="out" extent="traditionalAS_MMA2MMB.qvtoas#//Target"/>
+  </eOperations>
+  <eStructuralFeatures xsi:type="qvtoperational.expr:ContextualProperty" name="intermediateMods" eType="ecore:EClass traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1/IntermediateMod"
+      context="http://mmb/1.0#//Mode"/>
+  <eClassifiers xsi:type="qvtoperational.expr:ModelType" name="MMA" instanceClassName="org.eclipse.m2m.internal.qvt.oml.evaluator.ModelInstance"
+      eSuperTypes="http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Model" metamodel="http://mma/1.0#/"/>
+  <eClassifiers xsi:type="qvtoperational.expr:ModelType" name="MMB" instanceClassName="org.eclipse.m2m.internal.qvt.oml.evaluator.ModelInstance"
+      eSuperTypes="http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Model" metamodel="http://mmb/1.0#/"/>
+  <eClassifiers xsi:type="qvtoperational.expr:ModelType" name="_INTERMEDIATE" metamodel="traditionalAS_MMA2MMB.qvtoas#//_INTERMEDIATE.1"/>
+  <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Modification)" instanceClassName="java.util.LinkedHashSet" elementType="ecore:EClass http://mmb/1.0#//Modification"/>
+  <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Element)" instanceClassName="java.util.Set" elementType="ecore:EClass http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Element"/>
+  <eClassifiers xsi:type="ocl.ecore:TypeType" name="Project" referredType="ecore:EClass http://mma/1.0#//Project"/>
+  <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Project)" instanceClassName="java.util.Set" elementType="ecore:EClass http://mma/1.0#//Project"/>
+  <eClassifiers xsi:type="ocl.ecore:BagType" name="Bag(Model)" instanceClassName="org.eclipse.ocl.util.Bag" elementType="ecore:EClass http://mmb/1.0#//Model"/>
+  <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Variable)" instanceClassName="java.util.LinkedHashSet" elementType="ecore:EClass http://mma/1.0#//Variable"/>
+  <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Automaton)" instanceClassName="java.util.LinkedHashSet" elementType="ecore:EClass http://mma/1.0#//Automaton"/>
+  <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Automaton)" instanceClassName="java.util.List" elementType="ecore:EClass http://mmb/1.0#//Automaton"/>
+  <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Automaton)" instanceClassName="java.util.LinkedHashSet" elementType="ecore:EClass http://mmb/1.0#//Automaton"/>
+  <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Location)" instanceClassName="java.util.LinkedHashSet" elementType="ecore:EClass http://mma/1.0#//Location"/>
+  <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Mode)" instanceClassName="java.util.List" elementType="ecore:EClass http://mmb/1.0#//Mode"/>
+  <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Mode)" instanceClassName="java.util.LinkedHashSet" elementType="ecore:EClass http://mmb/1.0#//Mode"/>
+  <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Edge)" instanceClassName="java.util.LinkedHashSet" elementType="ecore:EClass http://mma/1.0#//Edge"/>
+  <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Edge)" instanceClassName="java.util.List" elementType="ecore:EClass http://mma/1.0#//Edge"/>
+  <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Transition)" instanceClassName="java.util.List" elementType="ecore:EClass http://mmb/1.0#//Transition"/>
+  <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Transition)" instanceClassName="java.util.LinkedHashSet" elementType="ecore:EClass http://mmb/1.0#//Transition"/>
+  <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Location)" instanceClassName="java.util.Set" elementType="ecore:EClass http://mma/1.0#//Location"/>
+  <eClassifiers xsi:type="ocl.ecore:CollectionType" name="Collection(Location)" instanceClassName="java.util.Collection" elementType="ecore:EClass http://mma/1.0#//Location"/>
+  <eClassifiers xsi:type="ocl.ecore:CollectionType" name="Collection(T2)" instanceClassName="java.util.Collection" elementType="ocl.ecore:AnyType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/T2"/>
+  <eClassifiers xsi:type="ocl.ecore:CollectionType" name="Collection(OclVoid)" instanceClassName="java.util.Collection" elementType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid"/>
+  <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Modification)" instanceClassName="java.util.List" elementType="ecore:EClass http://mmb/1.0#//Modification"/>
+  <eClassifiers xsi:type="ocl.ecore:TypeType" name="Location" referredType="ecore:EClass http://mma/1.0#//Location"/>
+  <eSubpackages name="_INTERMEDIATE" nsURI="http://www.eclipse.org/qvt/1.0.0/Operational/Expressions/_INTERMEDIATE" nsPrefix="_intermediate">
+    <eClassifiers xsi:type="ecore:EClass" name="IntermediateMod">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="Urgent" ordered="false" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="vars" ordered="false" eType="ocl.ecore:OrderedSetType traditionalAS_MMA2MMB.qvtoas#//OrderedSet(Modification)"/>
+    </eClassifiers>
+  </eSubpackages>
+  <ownedVariable name="this" eType="qvtoperational.expr:OperationalTransformation traditionalAS_MMA2MMB.qvtoas#/"/>
+  <modelParameter name="Source" eType="qvtoperational.expr:ModelType traditionalAS_MMA2MMB.qvtoas#//MMA" representedParameter="qvtoperational.expr:ModelParameter traditionalAS_MMA2MMB.qvtoas#//Source"/>
+  <modelParameter name="Target" eType="qvtoperational.expr:ModelType traditionalAS_MMA2MMB.qvtoas#//MMB" representedParameter="qvtoperational.expr:ModelParameter traditionalAS_MMA2MMB.qvtoas#//Target"
+      kind="out"/>
+</qvtoperational.expr:OperationalTransformation>

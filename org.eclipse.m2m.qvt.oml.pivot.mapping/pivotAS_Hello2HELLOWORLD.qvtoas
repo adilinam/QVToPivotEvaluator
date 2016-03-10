@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pivot:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:imperativeocl="http://www.eclipse.org/qvt/pivot/1.0/ImperativeOCL"
+    xmlns:pivot="http://www.eclipse.org/ocl/2015/Pivot" xmlns:qvtoperational="http://www.eclipse.org/qvt/pivot/1.0/QVTOperational" xsi:schemaLocation="http://www.eclipse.org/qvt/pivot/1.0/ImperativeOCL java://org.eclipse.qvto.examples.pivot.imperativeocl.ImperativeOCLPackage http://www.eclipse.org/ocl/2015/Pivot java://org.eclipse.ocl.pivot.PivotPackage http://www.eclipse.org/qvt/pivot/1.0/QVTOperational java://org.eclipse.qvto.examples.pivot.qvtoperational.QVTOperationalPackage"
+    name="pivotAS_Hello2HELLOWORLD.qvtoas" externalURI="pivotAS_Hello2HELLOWORLD.qvtoas">
+  <ownedPackages xmi:id="P." name="">
+    <ownedClasses xsi:type="qvtoperational:OperationalTransformation" xmi:id="T..-null-element-" usedModelType="pivotAS_Hello2HELLOWORLD.qvtoas#T..ABC">
+      <ownedOperations xsi:type="qvtoperational:EntryOperation" xmi:id="o..null.main" name="main">
+        <body>
+          <content xsi:type="imperativeocl:ImperativeIterateExp" name="xcollect">
+            <ownedSource xsi:type="imperativeocl:ImperativeIterateExp" name="xselect">
+              <ownedSource xsi:type="pivot:OperationCallExp" type="pivot:VoidType http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclVoid">
+                <ownedSource xsi:type="pivot:VariableExp" name="source" referredVariable="qvtoperational:ModelParameter pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@modelParameter.0"/>
+              </ownedSource>
+              <ownedIterators name="temp1"/>
+            </ownedSource>
+            <ownedBody xsi:type="qvtoperational:MappingCallExp" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.Root" referredOperation="pivotAS_Hello2HELLOWORLD.qvtoas#o..null.Root2Root"/>
+            <ownedIterators name="temp2" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.Root"/>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:MappingOperation" xmi:id="o..null.Root2Root" name="Root2Root" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.Root">
+        <body xsi:type="qvtoperational:MappingBody">
+          <content xsi:type="qvtoperational:ObjectExp" name="result" referredObject="pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.1/@result.0">
+            <body>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="element" type="pivot:OrderedSetType pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.1/@ownedClasses.0"
+                    referredProperty="http:///ABC.ecore.oclas#p.ABC.Root.element">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" referredVariable="qvtoperational:MappingParameter pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.1/@result.0"/>
+                </left>
+                <value xsi:type="imperativeocl:ImperativeIterateExp" name="xcollect">
+                  <ownedSource xsi:type="imperativeocl:ImperativeIterateExp" name="xselect">
+                    <ownedSource xsi:type="pivot:IteratorExp" name="select" type="pivot:OrderedSetType pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.1/@ownedClasses.0"
+                        referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.select..T">
+                      <ownedSource xsi:type="pivot:PropertyCallExp" name="element" type="pivot:OrderedSetType pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.1/@ownedClasses.0"
+                          referredProperty="http:///ABC.ecore.oclas#p.ABC.Root.element">
+                        <ownedSource xsi:type="pivot:VariableExp" name="self" referredVariable="qvtoperational:MappingParameter pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.1/@context"/>
+                      </ownedSource>
+                      <ownedBody xsi:type="pivot:OperationCallExp" name="oclIsKindOf" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                          referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.oclIsKindOf..ocl.OclType">
+                        <ownedSource xsi:type="pivot:VariableExp" name="a" referredVariable="pivot:Variable pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.1/@body/@content.0/@body/@content.0/@value.0/@ownedSource/@ownedSource/@ownedIterators.0"/>
+                        <ownedArguments xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class"
+                            referredType="pivot:Class http:///ABC.ecore.oclas#T.ABC.A"/>
+                      </ownedBody>
+                      <ownedIterators name="a" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.Element"/>
+                    </ownedSource>
+                    <ownedIterators name="temp1" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.Element"/>
+                  </ownedSource>
+                  <ownedBody xsi:type="qvtoperational:MappingCallExp" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.B" referredOperation="pivotAS_Hello2HELLOWORLD.qvtoas#o..null.A2B"/>
+                  <ownedIterators name="temp2" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.A"/>
+                </value>
+              </content>
+            </body>
+          </content>
+        </body>
+        <context xsi:type="qvtoperational:MappingParameter" name="self" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.Root"/>
+        <result xsi:type="qvtoperational:MappingParameter" name="result" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.Root"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:MappingOperation" xmi:id="o..null.A2B" name="A2B" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.B">
+        <body xsi:type="qvtoperational:MappingBody">
+          <content xsi:type="qvtoperational:ObjectExp" name="result" referredObject="pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.2/@result.0">
+            <body>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="id" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EInt"
+                    referredProperty="http:///ABC.ecore.oclas#p.ABC.Element.id">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.B" referredVariable="qvtoperational:MappingParameter pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.2/@result.0"/>
+                </left>
+                <value xsi:type="pivot:PropertyCallExp" name="id" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EInt"
+                    referredProperty="http:///ABC.ecore.oclas#p.ABC.Element.id">
+                  <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.A" referredVariable="qvtoperational:MappingParameter pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.2/@context"/>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="b" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http:///ABC.ecore.oclas#p.ABC.B.b">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.B" referredVariable="qvtoperational:MappingParameter pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.2/@result.0"/>
+                </left>
+                <value xsi:type="pivot:OperationCallExp" name="+" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.String.%43%..ocl.String">
+                  <ownedSource xsi:type="pivot:PropertyCallExp" name="a" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                      referredProperty="http:///ABC.ecore.oclas#p.ABC.A.a">
+                    <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.A" referredVariable="qvtoperational:MappingParameter pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.2/@context"/>
+                  </ownedSource>
+                  <ownedArguments xsi:type="pivot:StringLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                      stringSymbol=" World!"/>
+                </value>
+              </content>
+            </body>
+          </content>
+        </body>
+        <context xsi:type="qvtoperational:MappingParameter" name="self" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.A"/>
+        <result xsi:type="qvtoperational:MappingParameter" name="result" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.B"/>
+        <when xsi:type="pivot:OperationCallExp" name=">" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+            referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclComparable.%62%..ocl.OclSelf">
+          <ownedSource xsi:type="pivot:PropertyCallExp" name="id" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EInt"
+              referredProperty="http:///ABC.ecore.oclas#p.ABC.Element.id">
+            <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http:///ABC.ecore.oclas#T.ABC.A" referredVariable="qvtoperational:MappingParameter pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.2/@context"/>
+          </ownedSource>
+          <ownedArguments xsi:type="pivot:IntegerLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Integer"
+              integerSymbol="0"/>
+        </when>
+      </ownedOperations>
+      <ownedVariable name="this" type="qvtoperational:OperationalTransformation pivotAS_Hello2HELLOWORLD.qvtoas#T..-null-element-"/>
+      <modelParameter name="source" type="qvtoperational:ModelType pivotAS_Hello2HELLOWORLD.qvtoas#T..ABC"/>
+      <modelParameter name="target" type="qvtoperational:ModelType pivotAS_Hello2HELLOWORLD.qvtoas#T..ABC"/>
+    </ownedClasses>
+    <ownedClasses xsi:type="qvtoperational:ModelType" xmi:id="T..ABC" name="ABC"/>
+  </ownedPackages>
+  <ownedPackages xmi:id="P.$$" name="$$" URI="http://www.eclipse.org/ocl/2015/Orphanage" nsPrefix="orphanage">
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.1/@ownedClasses.1 pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.1/@ownedClasses.2"
+        elementType="pivot:Class http:///ABC.ecore.oclas#T.ABC.Element">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http:///ABC.ecore.oclas#T.ABC.Element" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.1/@ownedClasses.3"
+        elementType="pivot:Class http:///ABC.ecore.oclas#T.ABC.Element">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http:///ABC.ecore.oclas#T.ABC.Element" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_Hello2HELLOWORLD.qvtoas#//@ownedPackages.1/@ownedClasses.3"
+        elementType="pivot:Class http:///ABC.ecore.oclas#T.ABC.Element">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http:///ABC.ecore.oclas#T.ABC.Element" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:Class http:///ABC.ecore.oclas#T.ABC.Element">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http:///ABC.ecore.oclas#T.ABC.Element" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+  </ownedPackages>
+</pivot:Model>

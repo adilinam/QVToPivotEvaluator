@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mma:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mma="http://mma/1.0" Title="Our First Transformation">
+  <bodies Name="A1">
+    <locations xsi:type="mma:Rectangle" Name="S1" IsInitial="true" Edge="4.5">
+      <outgoingEdges Action="A" targetLocation="//@bodies.0/@locations.1"/>
+      <updates>
+        <variables Name="V2" Type="Double"/>
+        <variables Name="V4" Type="Integer"/>
+      </updates>
+    </locations>
+    <locations xsi:type="mma:Ellipse" Name="S2" Radius="2.0">
+      <outgoingEdges Action="C" targetLocation="//@bodies.0/@locations.1"/>
+      <outgoingEdges Action="B" targetLocation="//@bodies.0/@locations.2"/>
+      <updates>
+        <variables Name="V1" Type="Boolean"/>
+      </updates>
+    </locations>
+    <locations xsi:type="mma:Triangle" Name="S3" Side="5.0">
+      <outgoingEdges Action="A" targetLocation="//@bodies.0/@locations.3"/>
+    </locations>
+    <locations xsi:type="mma:Rectangle" Name="S4" Edge="1.0">
+      <updates>
+        <variables Name="V3" Type="String"/>
+        <variables Name="V5" Type="Char"/>
+      </updates>
+    </locations>
+  </bodies>
+</mma:Project>

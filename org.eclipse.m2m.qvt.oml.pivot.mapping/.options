@@ -1,0 +1,4 @@
+# Debugging options for the org.eclipse.m2m.qvt.oml.pivot.mapping plug-in
+
+# Turn on tracing of creation of Pivot objects
+org.eclipse.m2m.qvt.oml.pivot.mapping/creation=false

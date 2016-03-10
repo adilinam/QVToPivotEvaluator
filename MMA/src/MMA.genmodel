@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/MMA/src" modelPluginID="MMA" modelName="MMA" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>../../Tutorial/MMA.ecore</foreignModel>
+  <genPackages prefix="Mma" disposableProviderFactory="true" ecorePackage="MMA.ecore#/">
+    <genClasses ecoreClass="MMA.ecore#//Project">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MMA.ecore#//Project/bodies"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Project/Title"/>
+    </genClasses>
+    <genClasses ecoreClass="MMA.ecore#//Automaton">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Automaton/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MMA.ecore#//Automaton/locations"/>
+    </genClasses>
+    <genClasses ecoreClass="MMA.ecore#//Location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Location/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Location/IsInitial"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MMA.ecore#//Location/outgoingEdges"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MMA.ecore#//Location/updates"/>
+    </genClasses>
+    <genClasses ecoreClass="MMA.ecore#//Rectangle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Rectangle/Edge"/>
+    </genClasses>
+    <genClasses ecoreClass="MMA.ecore#//Ellipse">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Ellipse/Radius"/>
+    </genClasses>
+    <genClasses ecoreClass="MMA.ecore#//Triangle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Triangle/Side"/>
+    </genClasses>
+    <genClasses ecoreClass="MMA.ecore#//Edge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Edge/Action"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MMA.ecore#//Edge/targetLocation"/>
+    </genClasses>
+    <genClasses ecoreClass="MMA.ecore#//Update">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MMA.ecore#//Update/variables"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Update/Urgent"/>
+    </genClasses>
+    <genClasses ecoreClass="MMA.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Variable/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MMA.ecore#//Variable/Type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

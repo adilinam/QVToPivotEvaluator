@@ -1,0 +1,120 @@
+modeltype MMA uses "http://mma/1.0";
+modeltype MMB uses "http://mmb/1.0";
+
+transformation MMATransformation(in Source: MMA, out Target: MMB);
+
+main() {	
+	Source.rootObjects()[Project] -> map ProjectToModel();
+}
+
+mapping Project::ProjectToModel() : Model {
+	Name := self.Title;
+	
+	automata := self.bodies -> map toAutomaton();
+}
+
+mapping MMA::Automaton::toAutomaton() : MMB::Automaton 
+when { self.Name.startsWith("A"); }
+{
+	Name := self.Name;
+	modes := self.locations -> map toMode();
+	transistions := self.locations.outgoingEdges -> map toTransition();
+	
+	try {
+	transistions := self.locations.outgoingEdges -> map toTransition();
+	  } except (Exception )
+	   {
+	   Name := self.Name;
+	   };
+	while(true){
+	
+	if(self.locations->size()>-1)
+	{	
+		log("Name of the Automaton: " + Name);
+			break;
+	};
+	continue;
+	
+	assert fatal (self.locations <> null);
+		};
+		
+}
+
+mapping Location::toMode() : Mode
+disjuncts Rectangle::fromRectangle, Ellipse::fromEllipse, Triangle::fromTriangle1, Triangle::fromTriangle2 { 
+	log("This log is never reached, disjunct mappings don't use their body.") 
+}
+
+mapping Rectangle::fromRectangle() : Mode 
+inherits Location::Updates {
+	Shape := "Rectangle";
+	Dimension := self.Edge;
+	log("Re");
+}
+
+mapping Ellipse::fromEllipse() : Mode 
+inherits Location::Updates {
+	Shape := "Ellipse";
+	Dimension := self.Radius;
+	log("El");
+}
+
+mapping Triangle::fromTriangle1() : Mode
+inherits Location::Updates 
+when { 1 = 2 }
+{
+	/*	Since the condition doesn't hold (1 is obviously not equal to 2),
+		this mapping won't be executed for a Triangle object. The one below 
+		will, because there are no conditions, and the input object is a 
+		Triangle.
+	*/	
+	log("Tr1");
+}
+
+mapping Triangle::fromTriangle2() : Mode 
+inherits Location::Updates {
+	Shape := "Triangle";
+	Dimension := self.Side;	
+	log("Tr2");
+}
+
+
+intermediate class IntermediateMod {
+	Urgent: Boolean;
+	vars: OrderedSet(Modification);
+}
+
+intermediate property Mode::intermediateMods : IntermediateMod;
+
+mapping Location::Updates() : Mode { 
+	Name := self.Name;
+	InitialState := self.IsInitial;
+	Modifications := ModificationsQuery(self.updates);
+	--intermediateMods := self.updates.map toIntermediateMod();
+}
+
+mapping Update::toIntermediateMod() : IntermediateMod {
+	Urgent := self.Urgent;
+	vars := self.variables->VarToMod();
+}
+
+mapping Variable::VarToMod() : Modification {
+	VarName := self.Name;
+	VarType := self.Type;
+}
+
+-- Use "Modifications := ModificationsQuery(self.updates);" to call this Query
+
+query ModificationsQuery( Updates: Update ) : OrderedSet(Modification) {
+	var Modifications: OrderedSet(Modification);
+	Updates.variables->forEach(Var) {
+		Modifications += object Modification { VarName := Var.Name; VarType := Var.Type; };
+	};
+	return Modifications;
+}
+
+mapping Edge::toTransition() : Transition {
+	Event := self.Action;
+	sourceMode := self.container().oclAsType(Location).resolveone(Mode);
+	targetMode := self.targetLocation.resolve(Mode)->at(1);
+}

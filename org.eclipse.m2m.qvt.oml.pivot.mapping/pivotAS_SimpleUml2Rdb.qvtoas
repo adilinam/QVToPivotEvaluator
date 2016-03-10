@@ -1,0 +1,1335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pivot:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:imperativeocl="http://www.eclipse.org/qvt/pivot/1.0/ImperativeOCL"
+    xmlns:pivot="http://www.eclipse.org/ocl/2015/Pivot" xmlns:qvtoperational="http://www.eclipse.org/qvt/pivot/1.0/QVTOperational" xsi:schemaLocation="http://www.eclipse.org/qvt/pivot/1.0/ImperativeOCL java://org.eclipse.qvto.examples.pivot.imperativeocl.ImperativeOCLPackage http://www.eclipse.org/ocl/2015/Pivot java://org.eclipse.ocl.pivot.PivotPackage http://www.eclipse.org/qvt/pivot/1.0/QVTOperational java://org.eclipse.qvto.examples.pivot.qvtoperational.QVTOperationalPackage"
+    name="pivotAS_SimpleUml2Rdb.qvtoas" externalURI="pivotAS_SimpleUml2Rdb.qvtoas">
+  <ownedPackages xmi:id="P." name="">
+    <ownedClasses xsi:type="qvtoperational:OperationalTransformation" xmi:id="T..-null-element-" usedModelType="pivotAS_SimpleUml2Rdb.qvtoas#T..A pivotAS_SimpleUml2Rdb.qvtoas#T..B pivotAS_SimpleUml2Rdb.qvtoas#T..simpleuml pivotAS_SimpleUml2Rdb.qvtoas#T..rdb">
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.package2schemas..simpleuml.Package" name="package2schemas" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.0">
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="root" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"/>
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.0"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:OperationCallExp" name="union" type="pivot:SetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.1"
+                referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.UniqueCollection.union..ocl.UniqueCollection">
+              <ownedSource xsi:type="pivot:CollectionLiteralExp" type="pivot:SetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.2">
+                <ownedParts xsi:type="pivot:CollectionItem" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema">
+                  <ownedItem xsi:type="qvtoperational:MappingCallExp" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema"
+                      referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.package2schema..simpleuml.Package"/>
+                </ownedParts>
+              </ownedSource>
+              <ownedArguments xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.0"
+                  referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+                <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.3"
+                    referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.collect..T">
+                  <ownedSource xsi:type="qvtoperational:ImperativeCallExp" name="getSubpackages" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.4"
+                      referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.getSubpackages">
+                    <ownedSource xsi:type="pivot:VariableExp" name="root" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"
+                        referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.0/@ownedParameters.0"/>
+                  </ownedSource>
+                  <ownedBody xsi:type="qvtoperational:ImperativeCallExp" name="package2schemas" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.0"
+                      referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.package2schemas..simpleuml.Package">
+                    <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                    <ownedArguments xsi:type="pivot:VariableExp" name="p" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.0/@body/@content.0/@ownedSource/@ownedArguments.0/@ownedSource/@ownedIterators.0"/>
+                  </ownedBody>
+                  <ownedIterators name="p" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"/>
+                </ownedSource>
+              </ownedArguments>
+            </ownedSource>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.class2foreignKeys..simpleuml.Class" name="class2foreignKeys" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.5">
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="cls" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"/>
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.6"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.7"
+                referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.collect..T">
+              <ownedSource xsi:type="pivot:PropertyCallExp" name="attributes" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.8"
+                  referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.DataType.attributes">
+                <ownedSource xsi:type="pivot:VariableExp" name="cls" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"
+                    referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.1/@ownedParameters.0"/>
+              </ownedSource>
+              <ownedBody xsi:type="qvtoperational:ResolveInExp" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.9"/>
+              <ownedIterators name="temp1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+            </ownedSource>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.class2columns..simpleuml.Class" name="class2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10">
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="cls" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"/>
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:OperationCallExp" name="union" type="pivot:SetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.11"
+                referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.UniqueCollection.union..ocl.UniqueCollection">
+              <ownedSource xsi:type="qvtoperational:ImperativeCallExp" name="dataType2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                  referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.dataType2columns..simpleuml.DataType">
+                <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                <ownedArguments xsi:type="pivot:VariableExp" name="cls" referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.2/@ownedParameters.0"/>
+              </ownedSource>
+              <ownedArguments xsi:type="qvtoperational:ImperativeCallExp" name="generalizations2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                  referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.generalizations2columns..simpleuml.Class">
+                <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                <ownedArguments xsi:type="pivot:VariableExp" name="cls" referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.2/@ownedParameters.0"/>
+              </ownedArguments>
+            </ownedSource>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.dataType2columns..simpleuml.DataType" name="dataType2columns"
+          type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10">
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"/>
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:OperationCallExp" name="union" type="pivot:SetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.11"
+                referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.UniqueCollection.union..ocl.UniqueCollection">
+              <ownedSource xsi:type="pivot:OperationCallExp" name="union" type="pivot:SetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.11"
+                  referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.UniqueCollection.union..ocl.UniqueCollection">
+                <ownedSource xsi:type="pivot:OperationCallExp" name="union" type="pivot:SetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.11"
+                    referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.UniqueCollection.union..ocl.UniqueCollection">
+                  <ownedSource xsi:type="qvtoperational:ImperativeCallExp" name="primitiveAttributes2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                      referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.primitiveAttributes2columns..simpleuml.DataType">
+                    <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                    <ownedArguments xsi:type="pivot:VariableExp" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"
+                        referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.3/@ownedParameters.0"/>
+                  </ownedSource>
+                  <ownedArguments xsi:type="qvtoperational:ImperativeCallExp" name="enumerationAttributes2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                      referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.enumerationAttributes2columns..simpleuml.DataType">
+                    <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                    <ownedArguments xsi:type="pivot:VariableExp" name="dt" referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.3/@ownedParameters.0"/>
+                  </ownedArguments>
+                </ownedSource>
+                <ownedArguments xsi:type="qvtoperational:ImperativeCallExp" name="relationshipAttributes2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.relationshipAttributes2columns..simpleuml.DataType">
+                  <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                  <ownedArguments xsi:type="pivot:VariableExp" name="dt" referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.3/@ownedParameters.0"/>
+                </ownedArguments>
+              </ownedSource>
+              <ownedArguments xsi:type="qvtoperational:ImperativeCallExp" name="assosiationAttributes2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                  referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.assosiationAttributes2columns..simpleuml.DataType">
+                <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                <ownedArguments xsi:type="pivot:VariableExp" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"
+                    referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.3/@ownedParameters.0"/>
+              </ownedArguments>
+            </ownedSource>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.dataType2primaryKeyColumns..simpleuml.DataType..ocl.String..ocl.Boolean"
+          name="dataType2primaryKeyColumns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10">
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"/>
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="prefix" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="leaveIsPrimaryKey" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"/>
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.6"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.7"
+                referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.collect..T">
+              <ownedSource xsi:type="pivot:IteratorExp" name="select" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                  referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.select..T">
+                <ownedSource xsi:type="qvtoperational:ImperativeCallExp" name="dataType2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.dataType2columns..simpleuml.DataType">
+                  <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                  <ownedArguments xsi:type="pivot:VariableExp" name="dt" referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@ownedParameters.0"/>
+                </ownedSource>
+                <ownedBody xsi:type="pivot:PropertyCallExp" name="isPrimaryKey" isRequired="false" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EBooleanObject"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.isPrimaryKey">
+                  <ownedSource xsi:type="pivot:VariableExp" name="temp1" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@body/@content.0/@ownedSource/@ownedSource/@ownedIterators.0"/>
+                </ownedBody>
+                <ownedIterators name="temp1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"/>
+              </ownedSource>
+              <ownedBody xsi:type="qvtoperational:ObjectExp" name="$temp_1" referredObject="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@body/@content.0/@ownedSource/@ownedBody/@body/@variable.0">
+                <body>
+                  <content xsi:type="imperativeocl:AssignExp">
+                    <left xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                        referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                      <ownedSource xsi:type="pivot:VariableExp" name="$temp_1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                          referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@body/@content.0/@ownedSource/@ownedBody/@body/@variable.0"/>
+                    </left>
+                    <value xsi:type="pivot:OperationCallExp" name="concat" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                        referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.String.concat..ocl.String">
+                      <ownedSource xsi:type="pivot:OperationCallExp" name="concat" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                          referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.String.concat..ocl.String">
+                        <ownedSource xsi:type="pivot:VariableExp" name="prefix" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                            referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@ownedParameters.1"/>
+                        <ownedArguments xsi:type="pivot:StringLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                            stringSymbol="_"/>
+                      </ownedSource>
+                      <ownedArguments xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                          referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                        <ownedSource xsi:type="pivot:VariableExp" name="c" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@body/@content.0/@ownedSource/@ownedIterators.0"/>
+                      </ownedArguments>
+                    </value>
+                  </content>
+                  <content xsi:type="imperativeocl:AssignExp">
+                    <left xsi:type="pivot:PropertyCallExp" name="domain" isRequired="false" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.datatypes.Domain"
+                        referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.domain">
+                      <ownedSource xsi:type="pivot:VariableExp" name="$temp_1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                          referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@body/@content.0/@ownedSource/@ownedBody/@body/@variable.0"/>
+                    </left>
+                    <value xsi:type="pivot:PropertyCallExp" name="domain" isRequired="false" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.datatypes.Domain"
+                        referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.domain">
+                      <ownedSource xsi:type="pivot:VariableExp" name="c" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                          referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@body/@content.0/@ownedSource/@ownedIterators.0"/>
+                    </value>
+                  </content>
+                  <content xsi:type="imperativeocl:AssignExp">
+                    <left xsi:type="pivot:PropertyCallExp" name="type" isRequired="false" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.datatypes.PrimitiveDataType"
+                        referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.type">
+                      <ownedSource xsi:type="pivot:VariableExp" name="$temp_1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                          referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@body/@content.0/@ownedSource/@ownedBody/@body/@variable.0"/>
+                    </left>
+                    <value xsi:type="pivot:PropertyCallExp" name="type" isRequired="false" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.datatypes.PrimitiveDataType"
+                        referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.type">
+                      <ownedSource xsi:type="pivot:VariableExp" name="c" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@body/@content.0/@ownedSource/@ownedIterators.0"/>
+                    </value>
+                  </content>
+                  <content xsi:type="imperativeocl:AssignExp">
+                    <left xsi:type="pivot:PropertyCallExp" name="isPrimaryKey" isRequired="false" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EBooleanObject"
+                        referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.isPrimaryKey">
+                      <ownedSource xsi:type="pivot:VariableExp" name="$temp_1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                          referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@body/@content.0/@ownedSource/@ownedBody/@body/@variable.0"/>
+                    </left>
+                    <value xsi:type="pivot:VariableExp" name="leaveIsPrimaryKey" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                        referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.4/@ownedParameters.2"/>
+                  </content>
+                  <variable name="$temp_1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"/>
+                </body>
+              </ownedBody>
+              <ownedIterators name="c" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"/>
+            </ownedSource>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.primitiveAttributes2columns..simpleuml.DataType" name="primitiveAttributes2columns"
+          type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10">
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"/>
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.6"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.7"
+                referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.collect..T">
+              <ownedSource xsi:type="pivot:PropertyCallExp" name="attributes" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.8"
+                  referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.DataType.attributes">
+                <ownedSource xsi:type="pivot:VariableExp" name="dt" referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.5/@ownedParameters.0"/>
+              </ownedSource>
+              <ownedBody xsi:type="qvtoperational:MappingCallExp" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                  referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.primitiveAttribute2column..simpleuml.Property"/>
+              <ownedIterators name="a" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+            </ownedSource>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.enumerationAttributes2columns..simpleuml.DataType" name="enumerationAttributes2columns"
+          type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10">
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"/>
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.6"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.12"
+                referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.collect..T">
+              <ownedSource xsi:type="pivot:PropertyCallExp" name="attributes" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.8"
+                  referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.DataType.attributes">
+                <ownedSource xsi:type="pivot:VariableExp" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"
+                    referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.6/@ownedParameters.0"/>
+              </ownedSource>
+              <ownedBody xsi:type="qvtoperational:MappingCallExp" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                  referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.enumerationAttribute2column..simpleuml.Property"/>
+              <ownedIterators name="a" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+            </ownedSource>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.relationshipAttributes2columns..simpleuml.DataType" name="relationshipAttributes2columns"
+          type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10">
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"/>
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.13"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.14"
+                referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.Sequence.collect..T">
+              <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.9"
+                  referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.collect..T">
+                <ownedSource xsi:type="pivot:PropertyCallExp" name="attributes" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.8"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.DataType.attributes">
+                  <ownedSource xsi:type="pivot:VariableExp" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"
+                      referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.7/@ownedParameters.0"/>
+                </ownedSource>
+                <ownedBody xsi:type="qvtoperational:MappingCallExp" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.relationshipAttribute2foreignKey"/>
+                <ownedIterators name="a" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+              </ownedSource>
+              <ownedBody xsi:type="pivot:PropertyCallExp" name="includedColumns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.15"
+                  referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.constraints.ColumnRefConstraint.includedColumns">
+                <ownedSource xsi:type="pivot:VariableExp" name="temp1" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.7/@body/@content.0/@ownedSource/@ownedIterators.0"/>
+              </ownedBody>
+              <ownedIterators name="temp1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey"/>
+            </ownedSource>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.assosiationAttributes2columns..simpleuml.DataType" name="assosiationAttributes2columns"
+          type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10">
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"/>
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.6"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.7"
+                referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.collect..T">
+              <ownedSource xsi:type="pivot:IteratorExp" name="select" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.8"
+                  referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.select..T">
+                <ownedSource xsi:type="pivot:PropertyCallExp" name="attributes" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.8"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.DataType.attributes">
+                  <ownedSource xsi:type="pivot:VariableExp" name="dt" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"
+                      referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.8/@ownedParameters.0"/>
+                </ownedSource>
+                <ownedBody xsi:type="qvtoperational:ImperativeCallExp" name="isAssosiation" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isAssosiation">
+                  <ownedSource xsi:type="pivot:VariableExp" name="temp1" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.8/@body/@content.0/@ownedSource/@ownedSource/@ownedIterators.0"/>
+                </ownedBody>
+                <ownedIterators name="temp1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+              </ownedSource>
+              <ownedBody xsi:type="qvtoperational:ImperativeCallExp" name="dataType2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                  referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.dataType2columns..simpleuml.DataType">
+                <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                <ownedArguments xsi:type="qvtoperational:ImperativeCallExp" name="asDataType" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.asDataType">
+                  <ownedSource xsi:type="pivot:PropertyCallExp" name="type" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                      referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Property.type">
+                    <ownedSource xsi:type="pivot:VariableExp" name="p" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                        referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.8/@body/@content.0/@ownedSource/@ownedIterators.0"/>
+                  </ownedSource>
+                </ownedArguments>
+              </ownedBody>
+              <ownedIterators name="p" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+            </ownedSource>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.generalizations2columns..simpleuml.Class" name="generalizations2columns"
+          type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10">
+        <ownedParameters xsi:type="qvtoperational:VarParameter" name="cls" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"/>
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.12"
+                referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.collect..T">
+              <ownedSource xsi:type="pivot:PropertyCallExp" name="generalizations" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.16"
+                  referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Class.generalizations">
+                <ownedSource xsi:type="pivot:VariableExp" name="cls" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"
+                    referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.9/@ownedParameters.0"/>
+              </ownedSource>
+              <ownedBody xsi:type="qvtoperational:ImperativeCallExp" name="class2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                  referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.class2columns..simpleuml.Class">
+                <ownedSource xsi:type="pivot:VariableExp" name="this" type="qvtoperational:OperationalTransformation pivotAS_SimpleUml2Rdb.qvtoas#T..-null-element-"
+                    referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                <ownedArguments xsi:type="pivot:PropertyCallExp" name="general" isRequired="false" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Generalization.general">
+                  <ownedSource xsi:type="pivot:VariableExp" name="g" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.9/@body/@content.0/@ownedSource/@ownedIterators.0"/>
+                </ownedArguments>
+              </ownedBody>
+              <ownedIterators name="g" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Generalization"/>
+            </ownedSource>
+          </content>
+        </body>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.getSubpackages" name="getSubpackages" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.4">
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.6"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+            <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.7"
+                referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.collect..T">
+              <ownedSource xsi:type="pivot:PropertyCallExp" name="ownedElements" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.17"
+                  referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Package.ownedElements">
+                <ownedSource xsi:type="pivot:VariableExp" name="self" referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.10/@context"/>
+              </ownedSource>
+              <ownedBody xsi:type="pivot:OperationCallExp" name="oclAsType" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"
+                  referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.oclAsType..TT">
+                <ownedSource xsi:type="pivot:VariableExp" name="temp1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"
+                    referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.10/@body/@content.0/@ownedSource/@ownedIterators.0"/>
+                <ownedArguments xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class"
+                    referredType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"/>
+              </ownedBody>
+              <ownedIterators name="temp1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"/>
+            </ownedSource>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.asDataType" name="asDataType" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType">
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="oclAsType" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.oclAsType..TT">
+            <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.11/@context"/>
+            <ownedArguments xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class" referredType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"/>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.isPrimaryKey" name="isPrimaryKey" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean">
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="includes" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.includes..ocl.OclAny">
+            <ownedSource xsi:type="pivot:PropertyCallExp" name="stereotype" type="pivot:SetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.18"
+                referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.stereotype">
+              <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                  referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.12/@context"/>
+            </ownedSource>
+            <ownedArguments xsi:type="pivot:StringLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                stringSymbol="primaryKey"/>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.isIdentifying" name="isIdentifying" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean">
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="includes" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.includes..ocl.OclAny">
+            <ownedSource xsi:type="pivot:PropertyCallExp" name="stereotype" type="pivot:SetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.18"
+                referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.stereotype">
+              <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                  referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.13/@context"/>
+            </ownedSource>
+            <ownedArguments xsi:type="pivot:StringLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                stringSymbol="identifying"/>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.isPrimitive" name="isPrimitive" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean">
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="oclIsKindOf" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.oclIsKindOf..ocl.OclType">
+            <ownedSource xsi:type="pivot:PropertyCallExp" name="type" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Property.type">
+              <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                  referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.14/@context"/>
+            </ownedSource>
+            <ownedArguments xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class" referredType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.PrimitiveType"/>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.isEnumeration" name="isEnumeration" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean">
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="oclIsKindOf" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.oclIsKindOf..ocl.OclType">
+            <ownedSource xsi:type="pivot:PropertyCallExp" name="type" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Property.type">
+              <ownedSource xsi:type="pivot:VariableExp" name="self" referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.15/@context"/>
+            </ownedSource>
+            <ownedArguments xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class" referredType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Enumeration"/>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.isRelationship" name="isRelationship" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean">
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="and" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Boolean.and..ocl.Boolean">
+            <ownedSource xsi:type="pivot:OperationCallExp" name="oclIsKindOf" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.oclIsKindOf..ocl.OclType">
+              <ownedSource xsi:type="pivot:PropertyCallExp" name="type" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                  referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Property.type">
+                <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                    referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.16/@context"/>
+              </ownedSource>
+              <ownedArguments xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class" referredType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"/>
+            </ownedSource>
+            <ownedArguments xsi:type="qvtoperational:ImperativeCallExp" name="isPersistent" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isPersistent">
+              <ownedSource xsi:type="pivot:PropertyCallExp" name="type" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                  referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Property.type">
+                <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                    referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.16/@context"/>
+              </ownedSource>
+            </ownedArguments>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.isAssosiation" name="isAssosiation" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean">
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="and" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Boolean.and..ocl.Boolean">
+            <ownedSource xsi:type="pivot:OperationCallExp" name="oclIsKindOf" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.oclIsKindOf..ocl.OclType">
+              <ownedSource xsi:type="pivot:PropertyCallExp" name="type" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                  referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Property.type">
+                <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                    referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.17/@context"/>
+              </ownedSource>
+              <ownedArguments xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class" referredType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"/>
+            </ownedSource>
+            <ownedArguments xsi:type="pivot:OperationCallExp" name="not" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Boolean.not">
+              <ownedSource xsi:type="qvtoperational:ImperativeCallExp" name="isPersistent" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                  referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isPersistent">
+                <ownedSource xsi:type="pivot:PropertyCallExp" name="type" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Property.type">
+                  <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                      referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.17/@context"/>
+                </ownedSource>
+              </ownedSource>
+            </ownedArguments>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.getPrimaryKeyColumns" name="getPrimaryKeyColumns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10">
+        <body>
+          <content xsi:type="pivot:IteratorExp" name="select" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+              referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.select..T">
+            <ownedSource xsi:type="pivot:PropertyCallExp" name="columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.Table.columns">
+              <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table"
+                  referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.18/@context"/>
+            </ownedSource>
+            <ownedBody xsi:type="pivot:PropertyCallExp" name="isPrimaryKey" isRequired="false" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EBooleanObject"
+                referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.isPrimaryKey">
+              <ownedSource xsi:type="pivot:VariableExp" name="temp1" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.18/@body/@content.0/@ownedIterators.0"/>
+            </ownedBody>
+            <ownedIterators name="temp1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"/>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.isPersistent" name="isPersistent" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean">
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name="includes" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.includes..ocl.OclAny">
+            <ownedSource xsi:type="pivot:PropertyCallExp" name="stereotype" type="pivot:SetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.18"
+                referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.stereotype">
+              <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.ModelElement"
+                  referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.19/@context"/>
+            </ownedSource>
+            <ownedArguments xsi:type="pivot:StringLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                stringSymbol="persistent"/>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.ModelElement"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Helper" xmi:id="o..null.hasPersistentClasses" name="hasPersistentClasses" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean">
+        <body>
+          <content xsi:type="pivot:OperationCallExp" name=">" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclComparable.%62%..ocl.OclSelf">
+            <ownedSource xsi:type="pivot:OperationCallExp" name="size" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Integer"
+                referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.size">
+              <ownedSource xsi:type="pivot:IteratorExp" name="select" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.17"
+                  referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.select..T">
+                <ownedSource xsi:type="pivot:IteratorExp" name="select" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.17"
+                    referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.select..T">
+                  <ownedSource xsi:type="pivot:PropertyCallExp" name="ownedElements" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.17"
+                      referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Package.ownedElements">
+                    <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"
+                        referredVariable="qvtoperational:VarParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.20/@context"/>
+                  </ownedSource>
+                  <ownedBody xsi:type="pivot:OperationCallExp" name="oclIsKindOf" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                      referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.oclIsKindOf..ocl.OclType">
+                    <ownedSource xsi:type="pivot:VariableExp" name="temp1" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.20/@body/@content.0/@ownedSource/@ownedSource/@ownedSource/@ownedIterators.0"/>
+                    <ownedArguments xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class"
+                        referredType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"/>
+                  </ownedBody>
+                  <ownedIterators name="temp1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"/>
+                </ownedSource>
+                <ownedBody xsi:type="qvtoperational:ImperativeCallExp" name="isPersistent" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isPersistent">
+                  <ownedSource xsi:type="pivot:OperationCallExp" name="oclAsType" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"
+                      referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.oclAsType..TT">
+                    <ownedSource xsi:type="pivot:VariableExp" name="c" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"
+                        referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.20/@body/@content.0/@ownedSource/@ownedSource/@ownedIterators.0"/>
+                    <ownedArguments xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class"
+                        referredType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"/>
+                  </ownedSource>
+                </ownedBody>
+                <ownedIterators name="c" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"/>
+              </ownedSource>
+            </ownedSource>
+            <ownedArguments xsi:type="pivot:IntegerLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Integer"
+                integerSymbol="0"/>
+          </content>
+        </body>
+        <context name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:MappingOperation" xmi:id="o..null.main..simpleuml.Model" name="main" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Model">
+        <ownedParameters xsi:type="qvtoperational:MappingParameter" name="model" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Model"/>
+        <body xsi:type="qvtoperational:MappingBody">
+          <content xsi:type="qvtoperational:ObjectExp" name="result" referredObject="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.21/@result.0">
+            <body>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Model"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.21/@result.0"/>
+                </left>
+                <value xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="model" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Model"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.21/@ownedParameters.0"/>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="schemas" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.0"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.Model.schemas">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Model"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.21/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:ImperativeCallExp" name="package2schemas" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.0"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.package2schemas..simpleuml.Package">
+                  <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                  <ownedArguments xsi:type="pivot:VariableExp" name="model" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.21/@ownedParameters.0"/>
+                </value>
+              </content>
+            </body>
+          </content>
+        </body>
+        <result xsi:type="qvtoperational:MappingParameter" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Model"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:MappingOperation" xmi:id="o..null.package2schema..simpleuml.Package" name="package2schema"
+          type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema">
+        <ownedParameters xsi:type="qvtoperational:MappingParameter" name="pack" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"/>
+        <body xsi:type="qvtoperational:MappingBody">
+          <content xsi:type="qvtoperational:ObjectExp" name="result" referredObject="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.22/@result.0">
+            <body>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.22/@result.0"/>
+                </left>
+                <value xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="pack" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.22/@ownedParameters.0"/>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="elements" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.19"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.Schema.elements">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.22/@result.0"/>
+                </left>
+                <value xsi:type="pivot:OperationCallExp" name="asOrderedSet" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.20"
+                    referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.Collection.asOrderedSet">
+                  <ownedSource xsi:type="pivot:IteratorExp" name="collect" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.21"
+                      referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.collect..T">
+                    <ownedSource xsi:type="pivot:IteratorExp" name="select" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.17"
+                        referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.OrderedSet.select..T">
+                      <ownedSource xsi:type="pivot:PropertyCallExp" name="ownedElements" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.17"
+                          referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Package.ownedElements">
+                        <ownedSource xsi:type="pivot:VariableExp" name="pack" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"
+                            referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.22/@ownedParameters.0"/>
+                      </ownedSource>
+                      <ownedBody xsi:type="pivot:OperationCallExp" name="oclIsKindOf" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                          referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.oclIsKindOf..ocl.OclType">
+                        <ownedSource xsi:type="pivot:VariableExp" name="temp1" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.22/@body/@content.0/@body/@content.1/@value.0/@ownedSource/@ownedSource/@ownedIterators.0"/>
+                        <ownedArguments xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class"
+                            referredType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"/>
+                      </ownedBody>
+                      <ownedIterators name="temp1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"/>
+                    </ownedSource>
+                    <ownedBody xsi:type="qvtoperational:MappingCallExp" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table"
+                        referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.persistentClass2table"/>
+                    <ownedIterators name="c" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"/>
+                  </ownedSource>
+                </value>
+              </content>
+            </body>
+          </content>
+        </body>
+        <result xsi:type="qvtoperational:MappingParameter" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema"/>
+        <when xsi:type="qvtoperational:ImperativeCallExp" name="hasPersistentClasses" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+            referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.hasPersistentClasses">
+          <ownedSource xsi:type="pivot:VariableExp" name="pack" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.22/@ownedParameters.0"/>
+        </when>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:MappingOperation" xmi:id="o..null.persistentClass2table" name="persistentClass2table"
+          type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table">
+        <body xsi:type="qvtoperational:MappingBody">
+          <content xsi:type="qvtoperational:ObjectExp" name="result" referredObject="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.23/@result.0">
+            <body>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.23/@result.0"/>
+                </left>
+                <value xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.23/@context"/>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.15"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.Table.columns">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.23/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:ImperativeCallExp" name="class2columns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.class2columns..simpleuml.Class">
+                  <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                  <ownedArguments xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.23/@context"/>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="primaryKey" isRequired="false" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.PrimaryKey"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.Table.primaryKey">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.23/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:MappingCallExp" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.PrimaryKey"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.class2primaryKey"/>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="foreignKeys" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.5"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.Table.foreignKeys">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.23/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:ImperativeCallExp" name="class2foreignKeys" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.5"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.class2foreignKeys..simpleuml.Class">
+                  <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                  <ownedArguments xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.23/@context"/>
+                </value>
+              </content>
+            </body>
+          </content>
+        </body>
+        <context xsi:type="qvtoperational:MappingParameter" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"/>
+        <result xsi:type="qvtoperational:MappingParameter" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table"/>
+        <when xsi:type="qvtoperational:ImperativeCallExp" name="isPersistent" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+            referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isPersistent">
+          <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"
+              referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.23/@context"/>
+        </when>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:MappingOperation" xmi:id="o..null.class2primaryKey" name="class2primaryKey" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.PrimaryKey">
+        <body xsi:type="qvtoperational:MappingBody">
+          <content xsi:type="qvtoperational:ObjectExp" name="result" referredObject="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.24/@result.0">
+            <body>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.PrimaryKey"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.24/@result.0"/>
+                </left>
+                <value xsi:type="pivot:OperationCallExp" name="concat" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.String.concat..ocl.String">
+                  <ownedSource xsi:type="pivot:StringLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                      stringSymbol="PK"/>
+                  <ownedArguments xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                      referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.name">
+                    <ownedSource xsi:type="pivot:VariableExp" name="self" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.24/@context"/>
+                  </ownedArguments>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="includedColumns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.15"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.constraints.ColumnRefConstraint.includedColumns">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.24/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:ImperativeCallExp" name="getPrimaryKeyColumns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.getPrimaryKeyColumns">
+                  <ownedSource xsi:type="pivot:IteratorExp" name="any" isRequired="false" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table"
+                      referredIteration="http://www.eclipse.org/ocl/2015/Library.oclas#i.ocl.Collection.any..T">
+                    <ownedSource xsi:type="qvtoperational:ResolveInExp" type="pivot:SequenceType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.21">
+                      <ownedSource xsi:type="pivot:VariableExp" name="self" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.24/@context"/>
+                    </ownedSource>
+                    <ownedBody xsi:type="pivot:BooleanLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                        booleanSymbol="true"/>
+                    <ownedIterators name="temp1" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table"/>
+                  </ownedSource>
+                </value>
+              </content>
+            </body>
+          </content>
+        </body>
+        <context xsi:type="qvtoperational:MappingParameter" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Class"/>
+        <result xsi:type="qvtoperational:MappingParameter" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.PrimaryKey"/>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:MappingOperation" xmi:id="o..null.primitiveAttribute2column..simpleuml.Property" name="primitiveAttribute2column"
+          type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn">
+        <ownedParameters xsi:type="qvtoperational:MappingParameter" name="prop" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+        <body xsi:type="qvtoperational:MappingBody">
+          <content xsi:type="qvtoperational:ObjectExp" name="result" referredObject="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.25/@result.0">
+            <body>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="isPrimaryKey" isRequired="false" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EBooleanObject"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.isPrimaryKey">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.25/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:ImperativeCallExp" name="isPrimaryKey" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isPrimaryKey">
+                  <ownedSource xsi:type="pivot:VariableExp" name="prop" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.25/@ownedParameters.0"/>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.25/@result.0"/>
+                </left>
+                <value xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="prop" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.25/@ownedParameters.0"/>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="type" isRequired="false" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.datatypes.PrimitiveDataType"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.type">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.25/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:ObjectExp" name="$temp_2" referredObject="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.25/@body/@content.0/@body/@content.2/@value.0/@body/@variable.0">
+                  <body>
+                    <content xsi:type="imperativeocl:AssignExp">
+                      <left xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                          referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                        <ownedSource xsi:type="pivot:VariableExp" name="$temp_2" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.25/@body/@content.0/@body/@content.2/@value.0/@body/@variable.0"/>
+                      </left>
+                      <value xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                          referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.name">
+                        <ownedSource xsi:type="pivot:PropertyCallExp" name="type" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                            referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Property.type">
+                          <ownedSource xsi:type="pivot:VariableExp" name="prop" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                              referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.25/@ownedParameters.0"/>
+                        </ownedSource>
+                      </value>
+                    </content>
+                    <variable name="$temp_2" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.datatypes.PrimitiveDataType"/>
+                  </body>
+                </value>
+              </content>
+            </body>
+          </content>
+        </body>
+        <result xsi:type="qvtoperational:MappingParameter" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"/>
+        <when xsi:type="qvtoperational:ImperativeCallExp" name="isPrimitive" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+            referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isPrimitive">
+          <ownedSource xsi:type="pivot:VariableExp" name="prop" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+              referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.25/@ownedParameters.0"/>
+        </when>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:MappingOperation" xmi:id="o..null.enumerationAttribute2column..simpleuml.Property" name="enumerationAttribute2column"
+          type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn">
+        <ownedParameters xsi:type="qvtoperational:MappingParameter" name="prop" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+        <body xsi:type="qvtoperational:MappingBody">
+          <content xsi:type="qvtoperational:ObjectExp" name="result" referredObject="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.26/@result.0">
+            <body>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="isPrimaryKey" isRequired="false" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EBooleanObject"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.isPrimaryKey">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.26/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:ImperativeCallExp" name="isPrimaryKey" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isPrimaryKey">
+                  <ownedSource xsi:type="pivot:VariableExp" name="prop" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.26/@ownedParameters.0"/>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.26/@result.0"/>
+                </left>
+                <value xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="prop" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.26/@ownedParameters.0"/>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="type" isRequired="false" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.datatypes.PrimitiveDataType"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.TableColumn.type">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.26/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:ObjectExp" name="$temp_3" referredObject="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.26/@body/@content.0/@body/@content.2/@value.0/@body/@variable.0">
+                  <body>
+                    <content xsi:type="imperativeocl:AssignExp">
+                      <left xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                          referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                        <ownedSource xsi:type="pivot:VariableExp" name="$temp_3" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.datatypes.PrimitiveDataType"
+                            referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.26/@body/@content.0/@body/@content.2/@value.0/@body/@variable.0"/>
+                      </left>
+                      <value xsi:type="pivot:StringLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                          stringSymbol="Integer"/>
+                    </content>
+                    <variable name="$temp_3" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.datatypes.PrimitiveDataType"/>
+                  </body>
+                </value>
+              </content>
+            </body>
+          </content>
+        </body>
+        <result xsi:type="qvtoperational:MappingParameter" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn"/>
+        <when xsi:type="qvtoperational:ImperativeCallExp" name="isEnumeration" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+            referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isEnumeration">
+          <ownedSource xsi:type="pivot:VariableExp" name="prop" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+              referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.26/@ownedParameters.0"/>
+        </when>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:MappingOperation" xmi:id="o..null.relationshipAttribute2foreignKey" name="relationshipAttribute2foreignKey"
+          type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey">
+        <body xsi:type="qvtoperational:MappingBody">
+          <content xsi:type="qvtoperational:ObjectExp" name="result" referredObject="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.27/@result.0">
+            <body>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.NamedElement.name">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.27/@result.0"/>
+                </left>
+                <value xsi:type="pivot:OperationCallExp" name="concat" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                    referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.String.concat..ocl.String">
+                  <ownedSource xsi:type="pivot:StringLiteralExp" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                      stringSymbol="FK"/>
+                  <ownedArguments xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                      referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.name">
+                    <ownedSource xsi:type="pivot:VariableExp" name="self" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.27/@context"/>
+                  </ownedArguments>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="includedColumns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.15"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.constraints.ColumnRefConstraint.includedColumns">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey"
+                      referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.27/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:ImperativeCallExp" name="dataType2primaryKeyColumns" type="pivot:OrderedSetType pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.10"
+                    referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.dataType2primaryKeyColumns..simpleuml.DataType..ocl.String..ocl.Boolean">
+                  <ownedSource xsi:type="pivot:VariableExp" name="this" referredVariable="pivot:Variable pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedVariable.0"/>
+                  <ownedArguments xsi:type="qvtoperational:ImperativeCallExp" name="asDataType" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.DataType"
+                      referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.asDataType">
+                    <ownedSource xsi:type="pivot:PropertyCallExp" name="type" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                        referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Property.type">
+                      <ownedSource xsi:type="pivot:VariableExp" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+                          referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.27/@context"/>
+                    </ownedSource>
+                  </ownedArguments>
+                  <ownedArguments xsi:type="pivot:PropertyCallExp" name="name" isRequired="false" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+                      referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.ModelElement.name">
+                    <ownedSource xsi:type="pivot:VariableExp" name="self" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.27/@context"/>
+                  </ownedArguments>
+                  <ownedArguments xsi:type="qvtoperational:ImperativeCallExp" name="isIdentifying" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+                      referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isIdentifying">
+                    <ownedSource xsi:type="pivot:VariableExp" name="self" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.27/@context"/>
+                  </ownedArguments>
+                </value>
+              </content>
+              <content xsi:type="imperativeocl:AssignExp">
+                <left xsi:type="pivot:PropertyCallExp" name="referredUC" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.UniqueConstraint"
+                    referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#p.rdb.constraints.ForeignKey.referredUC">
+                  <ownedSource xsi:type="pivot:VariableExp" name="result" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.27/@result.0"/>
+                </left>
+                <value xsi:type="qvtoperational:ResolveInExp" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.PrimaryKey">
+                  <ownedSource xsi:type="pivot:PropertyCallExp" name="type" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Type"
+                      referredProperty="http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#p.simpleuml.Property.type">
+                    <ownedSource xsi:type="pivot:VariableExp" name="self" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.27/@context"/>
+                  </ownedSource>
+                </value>
+              </content>
+            </body>
+          </content>
+        </body>
+        <context xsi:type="qvtoperational:MappingParameter" name="self" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"/>
+        <result xsi:type="qvtoperational:MappingParameter" name="result" type="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey"/>
+        <when xsi:type="qvtoperational:ImperativeCallExp" name="isRelationship" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#Boolean"
+            referredOperation="pivotAS_SimpleUml2Rdb.qvtoas#o..null.isRelationship">
+          <ownedSource xsi:type="pivot:VariableExp" name="self" referredVariable="qvtoperational:MappingParameter pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.0/@ownedClasses.0/@ownedOperations.27/@context"/>
+        </when>
+      </ownedOperations>
+      <ownedOperations xsi:type="qvtoperational:Constructor" xmi:id="o..null.B" name="B">
+        <body xsi:type="qvtoperational:ConstructorBody">
+          <content xsi:type="pivot:OperationCallExp" name="toString" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+              referredOperation="http://www.eclipse.org/ocl/2015/Library.oclas#o.ocl.OclAny.toString">
+            <ownedSource xsi:type="pivot:TypeExp" type="pivot:Class http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.Class" referredType="qvtoperational:ModelType pivotAS_SimpleUml2Rdb.qvtoas#T..B"/>
+          </content>
+          <variable xsi:type="qvtoperational:VarParameter" name="result" type="qvtoperational:ModelType pivotAS_SimpleUml2Rdb.qvtoas#T..B"/>
+        </body>
+      </ownedOperations>
+      <ownedVariable name="this" type="qvtoperational:OperationalTransformation pivotAS_SimpleUml2Rdb.qvtoas#T..-null-element-"/>
+      <modelParameter name="$model" type="qvtoperational:ModelType pivotAS_SimpleUml2Rdb.qvtoas#T..simpleuml"/>
+      <modelParameter name="$result" type="qvtoperational:ModelType pivotAS_SimpleUml2Rdb.qvtoas#T..rdb"/>
+    </ownedClasses>
+    <ownedClasses xsi:type="qvtoperational:ModelType" xmi:id="T..A" name="A"/>
+    <ownedClasses xsi:type="qvtoperational:ModelType" xmi:id="T..B" name="B"/>
+    <ownedClasses xsi:type="qvtoperational:ModelType" xmi:id="T..simpleuml" name="simpleuml"/>
+    <ownedClasses xsi:type="qvtoperational:ModelType" xmi:id="T..rdb" name="rdb"/>
+  </ownedPackages>
+  <ownedPackages xmi:id="P.$$" name="$$" URI="http://www.eclipse.org/ocl/2015/Orphanage" nsPrefix="orphanage">
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.22 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.23"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:SetType" name="Set" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.23"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..SetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:SetType" name="Set" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.23"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema" isNullFree="true">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..SetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:SequenceType" name="Sequence" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.22"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..SequenceT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.24 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.25"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.26 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.27"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.28 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.29"
+        elementType="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.OrderedSet..collectV">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.OrderedSet..collectV"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:SequenceType" name="Sequence" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.28"
+        elementType="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.OrderedSet..collectV">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.OrderedSet..collectV"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..SequenceT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.30 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.31"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:SequenceType" name="Sequence" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.26"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..SequenceT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.32 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.33"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:SetType" name="Set" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.33"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..SetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:SequenceType" name="Sequence" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.32"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..SequenceT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.34 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.35"
+        elementType="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.Sequence..collectV">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.Sequence..collectV" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:SequenceType" name="Sequence" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.34"
+        elementType="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.Sequence..collectV">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.Sequence..collectV" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..SequenceT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.32 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.33"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn" lower="1">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.36 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.37"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Generalization">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Generalization"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.38 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.39"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:SetType" name="Set" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.40"
+        elementType="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..SetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.41 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.42"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.SchemaElement">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.SchemaElement" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.43 pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.44"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:SequenceType" name="Sequence" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.43"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..SequenceT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.45"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.45"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.46"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.46"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.47"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.47"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.48"
+        elementType="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.OrderedSet..collectV">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.OrderedSet..collectV"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.48"
+        elementType="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.OrderedSet..collectV">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.OrderedSet..collectV"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.49"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.49"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.50"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.50"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.51"
+        elementType="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.Sequence..collectV">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.Sequence..collectV" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.51"
+        elementType="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.Sequence..collectV">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.Sequence..collectV" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.52"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Generalization">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Generalization"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.52"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Generalization">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Generalization"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.53"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.53"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.54"
+        elementType="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.55"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.SchemaElement">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.SchemaElement" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.55"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.SchemaElement">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.SchemaElement" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.56"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="pivotAS_SimpleUml2Rdb.qvtoas#//@ownedPackages.1/@ownedClasses.56"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Schema" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Package"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.constraints.ForeignKey"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.OrderedSet..collectV">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.OrderedSet..collectV"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Property"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.TableColumn" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.Sequence..collectV">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:TemplateParameter http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl.Sequence..collectV" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Generalization">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Generalization"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/simpleuml.oclas#T.simpleuml.Packageable"
+            formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.SchemaElement">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.SchemaElement" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table">
+      <ownedBindings>
+        <ownedSubstitutions actual="pivot:Class http://www.eclipse.org/qvt/1.0.0/Operational/examples/rdb.oclas#T.rdb.Table" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+  </ownedPackages>
+</pivot:Model>

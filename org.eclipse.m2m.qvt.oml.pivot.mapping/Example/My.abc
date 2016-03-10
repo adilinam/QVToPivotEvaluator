@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ABC:Root xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ABC="http:///ABC.ecore">
+  <element xsi:type="ABC:A" id="1" a="Hello"/>
+  <element xsi:type="ABC:A" id="-1" a="World"/>
+  <element xsi:type="ABC:C" id="1" c="Something"/>
+</ABC:Root>

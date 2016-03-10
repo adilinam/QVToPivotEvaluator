@@ -1,0 +1,21 @@
+modeltype ABC uses ABC('http:///ABC.ecore');
+
+transformation HelloWorld(in source:ABC, out target:ABC);
+
+main() {
+	source.rootObjects()[Root]->map Root2Root();
+}
+
+mapping Root :: Root2Root() : Root {
+	element += self.element->select(a |
+		a.oclIsKindOf(A))[A]->map A2B();
+}
+
+mapping A :: A2B() : B
+	when {
+		self.id > 0
+	}
+	{
+	result.id := self.id;
+	result.b := self.a + " World!";
+}

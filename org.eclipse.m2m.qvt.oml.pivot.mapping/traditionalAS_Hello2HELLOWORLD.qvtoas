@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qvtoperational.expr:OperationalTransformation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eimpocl="http://www.eclipse.org/qvt/1.0/ImperativeOCL" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore"
+    xmlns:qvtoperational.expr="http://www.eclipse.org/qvt/1.0.0/Operational/Expressions" xsi:schemaLocation="http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage http://www.eclipse.org/qvt/1.0/ImperativeOCL java://org.eclipse.m2m.qvt.oml.ecore.ImperativeOCL.ImperativeOCLPackage http://www.eclipse.org/ocl/1.1.0/Ecore java://org.eclipse.ocl.ecore.EcorePackage http://www.eclipse.org/qvt/1.0.0/Operational/Expressions java://org.eclipse.m2m.internal.qvt.oml.expressions.ExpressionsPackage"
+    name="HelloWorld" instanceClassName="org.eclipse.m2m.internal.qvt.oml.evaluator.TransformationInstance"
+    eSuperTypes="http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Transformation" nsPrefix="HelloWorld" entry="traditionalAS_Hello2HELLOWORLD.qvtoas#//main"
+    usedModelType="traditionalAS_Hello2HELLOWORLD.qvtoas#//ABC">
+  <eOperations xsi:type="qvtoperational.expr:EntryOperation" name="main" eType="ocl.ecore:VoidType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclVoid">
+    <body>
+      <content xsi:type="eimpocl:ImperativeIterateExp" name="xcollect" eType="ocl.ecore:BagType traditionalAS_Hello2HELLOWORLD.qvtoas#//Bag(Root)">
+        <source xsi:type="eimpocl:ImperativeIterateExp" name="xselect" eType="ocl.ecore:SetType traditionalAS_Hello2HELLOWORLD.qvtoas#//Set(Root)">
+          <source xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:SetType traditionalAS_Hello2HELLOWORLD.qvtoas#//Set(Element)"
+              referredOperation="ecore:EOperation http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Model/rootObjects">
+            <source xsi:type="ocl.ecore:VariableExp" name="source" eType="qvtoperational.expr:ModelType traditionalAS_Hello2HELLOWORLD.qvtoas#//ABC"
+                referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//source"/>
+          </source>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp1" eType="ecore:EClass http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Element"/>
+          <condition xsi:type="ocl.ecore:TypeExp" eType="ocl.ecore:TypeType traditionalAS_Hello2HELLOWORLD.qvtoas#//Root" referredType="ecore:EClass http:///ABC.ecore#//Root"/>
+        </source>
+        <body xsi:type="qvtoperational.expr:MappingCallExp" eType="ecore:EClass http:///ABC.ecore#//Root" referredOperation="qvtoperational.expr:MappingOperation traditionalAS_Hello2HELLOWORLD.qvtoas#//Root2Root">
+          <source xsi:type="ocl.ecore:VariableExp" name="temp2" eType="ecore:EClass http:///ABC.ecore#//Root" referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//main/@body/@content.0/temp2"/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="temp2" eType="ecore:EClass http:///ABC.ecore#//Root"/>
+      </content>
+    </body>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="Root2Root" eType="ecore:EClass http:///ABC.ecore#//Root">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http:///ABC.ecore#//Root" extent="traditionalAS_Hello2HELLOWORLD.qvtoas#//target"
+          instantiatedClass="http:///ABC.ecore#//Root" referredObject="traditionalAS_Hello2HELLOWORLD.qvtoas#//Root2Root/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:OrderedSetType traditionalAS_Hello2HELLOWORLD.qvtoas#//OrderedSet(Element)"
+              isReset="false">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_Hello2HELLOWORLD.qvtoas#//OrderedSet(Element)"
+                referredProperty="ecore:EReference http:///ABC.ecore#//Root/element">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http:///ABC.ecore#//Root" referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//Root2Root/result"/>
+            </left>
+            <value xsi:type="eimpocl:ImperativeIterateExp" name="xcollect" eType="ocl.ecore:SequenceType traditionalAS_Hello2HELLOWORLD.qvtoas#//Sequence(B)">
+              <source xsi:type="eimpocl:ImperativeIterateExp" name="xselect" eType="ocl.ecore:OrderedSetType traditionalAS_Hello2HELLOWORLD.qvtoas#//OrderedSet(A)">
+                <source xsi:type="ocl.ecore:IteratorExp" name="select" eType="ocl.ecore:OrderedSetType traditionalAS_Hello2HELLOWORLD.qvtoas#//OrderedSet(Element)">
+                  <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:OrderedSetType traditionalAS_Hello2HELLOWORLD.qvtoas#//OrderedSet(Element)"
+                      referredProperty="ecore:EReference http:///ABC.ecore#//Root/element">
+                    <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http:///ABC.ecore#//Root" referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//Root2Root/self"/>
+                  </source>
+                  <body xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+                      referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsKindOf">
+                    <source xsi:type="ocl.ecore:VariableExp" name="a" eType="ecore:EClass http:///ABC.ecore#//Element" referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//Root2Root/@body/@content.0/@body/@content.0/xcollect/xselect/select/a"/>
+                    <argument xsi:type="ocl.ecore:TypeExp" eType="ocl.ecore:TypeType traditionalAS_Hello2HELLOWORLD.qvtoas#//A" referredType="ecore:EClass http:///ABC.ecore#//A"/>
+                  </body>
+                  <iterator xsi:type="ocl.ecore:Variable" name="a" eType="ecore:EClass http:///ABC.ecore#//Element"/>
+                </source>
+                <iterator xsi:type="ocl.ecore:Variable" name="temp1" eType="ecore:EClass http:///ABC.ecore#//Element"/>
+                <condition xsi:type="ocl.ecore:TypeExp" eType="ocl.ecore:TypeType traditionalAS_Hello2HELLOWORLD.qvtoas#//A" referredType="ecore:EClass http:///ABC.ecore#//A"/>
+              </source>
+              <body xsi:type="qvtoperational.expr:MappingCallExp" eType="ecore:EClass http:///ABC.ecore#//B" referredOperation="qvtoperational.expr:MappingOperation traditionalAS_Hello2HELLOWORLD.qvtoas#//A2B">
+                <source xsi:type="ocl.ecore:VariableExp" name="temp2" eType="ecore:EClass http:///ABC.ecore#//A" referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//Root2Root/@body/@content.0/@body/@content.0/xcollect/temp2"/>
+              </body>
+              <iterator xsi:type="ocl.ecore:Variable" name="temp2" eType="ecore:EClass http:///ABC.ecore#//A"/>
+            </value>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http:///ABC.ecore#//Root" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_Hello2HELLOWORLD.qvtoas#//Root2Root/self"
+        extent="traditionalAS_Hello2HELLOWORLD.qvtoas#//source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http:///ABC.ecore#//Root" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_Hello2HELLOWORLD.qvtoas#//Root2Root/result"
+        kind="out" extent="traditionalAS_Hello2HELLOWORLD.qvtoas#//target"/>
+  </eOperations>
+  <eOperations xsi:type="qvtoperational.expr:MappingOperation" name="A2B" eType="ecore:EClass http:///ABC.ecore#//B">
+    <body xsi:type="qvtoperational.expr:MappingBody">
+      <content xsi:type="qvtoperational.expr:ObjectExp" name="result" eType="ecore:EClass http:///ABC.ecore#//B" extent="traditionalAS_Hello2HELLOWORLD.qvtoas#//target"
+          instantiatedClass="http:///ABC.ecore#//B" referredObject="traditionalAS_Hello2HELLOWORLD.qvtoas#//A2B/result">
+        <body>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+                referredProperty="ecore:EAttribute http:///ABC.ecore#//Element/id">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http:///ABC.ecore#//B" referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//A2B/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+                referredProperty="ecore:EAttribute http:///ABC.ecore#//Element/id">
+              <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http:///ABC.ecore#//A" referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//A2B/self"/>
+            </value>
+          </content>
+          <content xsi:type="eimpocl:AssignExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+              isReset="true">
+            <left xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredProperty="ecore:EAttribute http:///ABC.ecore#//B/b">
+              <source xsi:type="ocl.ecore:VariableExp" name="result" eType="ecore:EClass http:///ABC.ecore#//B" referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//A2B/result"/>
+            </left>
+            <value xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/+">
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                  referredProperty="ecore:EAttribute http:///ABC.ecore#//A/a">
+                <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http:///ABC.ecore#//A" referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//A2B/self"/>
+              </source>
+              <argument xsi:type="ocl.ecore:StringLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"
+                  stringSymbol=" World!"/>
+            </value>
+          </content>
+        </body>
+      </content>
+    </body>
+    <context xsi:type="qvtoperational.expr:MappingParameter" name="self" eType="ecore:EClass http:///ABC.ecore#//A" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_Hello2HELLOWORLD.qvtoas#//A2B/self"
+        extent="traditionalAS_Hello2HELLOWORLD.qvtoas#//source"/>
+    <result xsi:type="qvtoperational.expr:MappingParameter" name="result" eType="ecore:EClass http:///ABC.ecore#//B" representedParameter="qvtoperational.expr:MappingParameter traditionalAS_Hello2HELLOWORLD.qvtoas#//A2B/result"
+        kind="out" extent="traditionalAS_Hello2HELLOWORLD.qvtoas#//target"/>
+    <when xsi:type="ocl.ecore:OperationCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"
+        referredOperation="ecore:EOperation http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E.1">
+      <source xsi:type="ocl.ecore:PropertyCallExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+          referredProperty="ecore:EAttribute http:///ABC.ecore#//Element/id">
+        <source xsi:type="ocl.ecore:VariableExp" name="self" eType="ecore:EClass http:///ABC.ecore#//A" referredVariable="traditionalAS_Hello2HELLOWORLD.qvtoas#//A2B/self"/>
+      </source>
+      <argument xsi:type="ocl.ecore:IntegerLiteralExp" eType="ocl.ecore:PrimitiveType http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"
+          integerSymbol="0"/>
+    </when>
+  </eOperations>
+  <eClassifiers xsi:type="qvtoperational.expr:ModelType" name="ABC" instanceClassName="org.eclipse.m2m.internal.qvt.oml.evaluator.ModelInstance"
+      eSuperTypes="http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Model" metamodel="http:///ABC.ecore#/"/>
+  <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Element)" instanceClassName="java.util.Set" elementType="ecore:EClass http://www.eclipse.org/m2m/qvt/oml/1.0.0/Stdlib#//Element"/>
+  <eClassifiers xsi:type="ocl.ecore:TypeType" name="Root" referredType="ecore:EClass http:///ABC.ecore#//Root"/>
+  <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(Root)" instanceClassName="java.util.Set" elementType="ecore:EClass http:///ABC.ecore#//Root"/>
+  <eClassifiers xsi:type="ocl.ecore:BagType" name="Bag(Root)" instanceClassName="org.eclipse.ocl.util.Bag" elementType="ecore:EClass http:///ABC.ecore#//Root"/>
+  <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Element)" instanceClassName="java.util.LinkedHashSet" elementType="ecore:EClass http:///ABC.ecore#//Element"/>
+  <eClassifiers xsi:type="ocl.ecore:TypeType" name="A" referredType="ecore:EClass http:///ABC.ecore#//A"/>
+  <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(A)" instanceClassName="java.util.LinkedHashSet" elementType="ecore:EClass http:///ABC.ecore#//A"/>
+  <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(B)" instanceClassName="java.util.List" elementType="ecore:EClass http:///ABC.ecore#//B"/>
+  <ownedVariable name="this" eType="qvtoperational.expr:OperationalTransformation traditionalAS_Hello2HELLOWORLD.qvtoas#/"/>
+  <modelParameter name="source" eType="qvtoperational.expr:ModelType traditionalAS_Hello2HELLOWORLD.qvtoas#//ABC" representedParameter="qvtoperational.expr:ModelParameter traditionalAS_Hello2HELLOWORLD.qvtoas#//source"/>
+  <modelParameter name="target" eType="qvtoperational.expr:ModelType traditionalAS_Hello2HELLOWORLD.qvtoas#//ABC" representedParameter="qvtoperational.expr:ModelParameter traditionalAS_Hello2HELLOWORLD.qvtoas#//target"
+      kind="out"/>
+</qvtoperational.expr:OperationalTransformation>

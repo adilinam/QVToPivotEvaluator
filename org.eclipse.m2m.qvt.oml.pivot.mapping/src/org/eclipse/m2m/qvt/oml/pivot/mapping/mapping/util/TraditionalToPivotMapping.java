@@ -3,6 +3,7 @@ package org.eclipse.m2m.qvt.oml.pivot.mapping.mapping.util;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
@@ -14,6 +15,7 @@ import org.eclipse.ocl.pivot.internal.utilities.EnvironmentFactoryInternal;
 import org.eclipse.ocl.pivot.internal.utilities.PivotObjectImpl;
 import org.eclipse.ocl.pivot.utilities.MetamodelManager;
 import org.eclipse.ocl.pivot.utilities.TracingOption;
+import org.eclipse.qvto.examples.pivot.qvtoperational.OperationalTransformation;
 
 @SuppressWarnings("restriction")
 public class TraditionalToPivotMapping
@@ -36,7 +38,7 @@ public class TraditionalToPivotMapping
 	protected final @NonNull TraditionalQVTo2PivotDeclarationVisitor declarationVisitor;
 	protected final @NonNull TraditionalQVTo2PivotReferenceVisitor referenceVisitor;
 	
-	
+	org.eclipse.qvto.examples.pivot.qvtoperational.OperationalTransformation pivotTransformation;
 	private final @NonNull Map<org.eclipse.ocl.utilities.Visitable, org.eclipse.ocl.pivot.Element> traditional2pivot
 		= new HashMap<org.eclipse.ocl.utilities.Visitable, org.eclipse.ocl.pivot.Element>();
 	
@@ -81,7 +83,7 @@ public class TraditionalToPivotMapping
 		for (org.eclipse.ocl.utilities.Visitable astNode : traditional2pivot.keySet()) {
 			astNode.accept(referenceVisitor);
 		}
-		org.eclipse.qvto.examples.pivot.qvtoperational.OperationalTransformation pivotTransformation = (org.eclipse.qvto.examples.pivot.qvtoperational.OperationalTransformation)traditional2pivot.get(operationalTransformation);
+		pivotTransformation = (org.eclipse.qvto.examples.pivot.qvtoperational.OperationalTransformation)traditional2pivot.get(operationalTransformation);
 		org.eclipse.ocl.pivot.Package pivotPackage = (org.eclipse.ocl.pivot.Package)pivotTransformation.eContainer();
 		org.eclipse.ocl.pivot.Model pivotModel = PivotFactory.eINSTANCE.createModel();
 		pivotModel.setName("tx");
@@ -118,6 +120,11 @@ public class TraditionalToPivotMapping
 	
 	public QVToFacade getQVTo() {
 		return qvto;
+	}
+
+	public @NonNull OperationalTransformation getTransformation() {
+		// TODO Auto-generated method stub
+		return pivotTransformation;
 	}
 	
 //	public void queueReference(org.eclipse.ocl.utilities.Visitable astNode) {

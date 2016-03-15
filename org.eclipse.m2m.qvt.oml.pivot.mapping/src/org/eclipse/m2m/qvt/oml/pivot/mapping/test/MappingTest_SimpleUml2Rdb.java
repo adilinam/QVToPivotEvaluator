@@ -15,8 +15,6 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.m2m.internal.qvt.oml.ast.env.QvtOperationalEnvFactory;
 import org.eclipse.m2m.qvt.oml.BasicModelExtent;
 import org.eclipse.m2m.qvt.oml.ExecutionContextImpl;
 import org.eclipse.m2m.qvt.oml.ModelExtent;
@@ -25,17 +23,7 @@ import org.eclipse.m2m.qvt.oml.mapping.pivot.test.QvtOperationalMappingArguments
 import org.eclipse.m2m.qvt.oml.pivot.mapping.mapping.util.FileOperationsUtil;
 import org.eclipse.m2m.qvt.oml.pivot.mapping.mapping.util.QVToFacade;
 import org.eclipse.m2m.qvt.oml.pivot.mapping.mapping.util.TraditionalToPivotMapping;
-import org.eclipse.m2m.qvt.oml.pivot.qvt.tests.QVTiInterpreterTests;
-import org.eclipse.ocl.examples.xtext.tests.TestUtil;
 import org.eclipse.ocl.pivot.resource.ASResource;
-import org.eclipse.ocl.pivot.utilities.ClassUtil;
-import org.eclipse.ocl.pivot.utilities.MetamodelManager;
-import org.eclipse.ocl.pivot.utilities.OCL;
-import org.eclipse.qvtd.pivot.qvtbase.Transformation;
-import org.eclipse.qvtd.pivot.qvtimperative.ImperativeModel;
-import org.eclipse.qvtd.pivot.qvtimperative.evaluation.BasicQVTiExecutor;
-import org.eclipse.qvtd.pivot.qvtimperative.evaluation.QVTiEnvironmentFactory;
-import org.eclipse.qvtd.xtext.qvtbase.tests.utilities.TestsXMLUtil;
 import org.eclipse.qvto.examples.pivot.qvtoperational.utilities.QVTOperationalASResourceFactory;
 import org.junit.Test;
 
@@ -68,7 +56,7 @@ public class MappingTest_SimpleUml2Rdb extends TestCase {
 		// Convert Ecore based Transformation to XML
 		FileOperationsUtil.writeTraditionalQVTOperationToXML(qvto, operationalTransformation, "traditionalAS_SimpleUml2Rdb");
 		// Convert Pivot based Transformation to XML
-		FileOperationsUtil.writePivotQVTOperationToXML(qvto, pivotOperationalTransformation, "pivotAS_SimpleUml2Rdb");
+		//FileOperationsUtil.writePivotQVTOperationToXML(qvto, pivotOperationalTransformation, "pivotAS_SimpleUml2Rdb");
 
 
 		ResourceSet resourceSet = new ResourceSetImpl();
@@ -140,30 +128,7 @@ public class MappingTest_SimpleUml2Rdb extends TestCase {
 		// input and output and execution context -> ChangeTheWorld(in, out)
 		// Remark: variable arguments count is supported
 		executor.execute(context, input, output);
-
-		///////////////////////////////
-
-		QVTiInterpreterTests.createExecutor(inResource);
-		
-		///////////////////////////////////////
 		System.out.println("Transformation executed.");
 	}
-	static  protected Transformation loadTransformation(MetamodelManager metamodelManager, URI txURI) {
-    	Resource txResource = metamodelManager.getASResourceSet().getResource(txURI, true);
-    	ImperativeModel iModel = (ImperativeModel) txResource.getContents().get(0);
-    	for (org.eclipse.ocl.pivot.Package p : iModel.getOwnedPackages()) {
-    		for (org.eclipse.ocl.pivot.Class c : p.getOwnedClasses()) {
-    			if (c instanceof Transformation){
-    				return (Transformation) c;
-    			}
-    		}
-    	}
-    	return null;
-    }
-	protected Object createQVT() {
-//		return new MyQVT(new TestQVTiEnvironmentFactory(OCL.NO_PROJECTS, null));
-		return new MappingTest_SimpleUml2Rdb();
-	}
-	
 
 }

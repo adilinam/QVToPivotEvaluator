@@ -3,7 +3,6 @@ package org.eclipse.m2m.qvt.oml.pivot.evaluator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.jdt.annotation.NonNull;
-import org.eclipse.m2m.qvt.oml.pivot.evaluator.AbstractQVToPivotVisitorImpl.AbstractEcoreSwitch;
 import org.eclipse.m2m.qvt.oml.pivot.mapping.mapping.util.TraditionalToPivotMapping;
 import org.eclipse.ocl.pivot.Element;
 import org.eclipse.ocl.pivot.evaluation.EvaluationEnvironment;
@@ -15,20 +14,10 @@ public  class QVToPivotEvaluationVisitor  extends OCLPivotEvaluationVisitor
 {
 	
 
-	protected static class OCLEcoreSwitch extends AbstractEcoreSwitch
-	{
-		public OCLEcoreSwitch(@NonNull TraditionalToPivotMapping converter) {
-			super(converter);
-		}
 
-		@Override
-		public Element caseEPackage(EPackage object) {
-			return super.caseEPackage(object);
-		}
-	}
-
-	public QVToPivotEvaluationVisitor(EvaluationEnvironment environment) {
-		super(environment);
+	public QVToPivotEvaluationVisitor(BasicQVToExecutor basicQVToExecutor) {
+		super(basicQVToExecutor);
+		
 	}
 
 	public Object visiting(Object astNode) {

@@ -1,9 +1,12 @@
 package org.eclipse.m2m.qvt.oml.pivot.evaluator;
 
+import org.eclipse.jdt.annotation.NonNull;
 import org.eclipse.jdt.annotation.Nullable;
-import org.eclipse.m2m.qvt.oml.pivot.mapping.mapping.util.TraditionalToPivotMapping;
-import org.eclipse.ocl.pivot.evaluation.EvaluationEnvironment;
-import org.eclipse.ocl.pivot.internal.evaluation.BasicEvaluationEnvironment;
+
+import org.eclipse.ocl.pivot.internal.manager.PivotMetamodelManager;
+import org.eclipse.ocl.pivot.utilities.ClassUtil;
+import org.eclipse.qvtd.pivot.qvtbase.Transformation;
+import org.eclipse.qvtd.pivot.qvtimperative.evaluation.BasicQVTiExecutor;
 import org.eclipse.qvto.examples.pivot.imperativeocl.AltExp;
 import org.eclipse.qvto.examples.pivot.imperativeocl.AssertExp;
 import org.eclipse.qvto.examples.pivot.imperativeocl.AssignExp;
@@ -17,8 +20,7 @@ import org.eclipse.qvto.examples.pivot.imperativeocl.DictLiteralPart;
 import org.eclipse.qvto.examples.pivot.imperativeocl.DictionaryType;
 import org.eclipse.qvto.examples.pivot.imperativeocl.ForExp;
 import org.eclipse.qvto.examples.pivot.imperativeocl.ImperativeExpression;
-import org.eclipse.qvto.examples.pivot.imperativeocl.ImperativeIterateExp;
-import org.eclipse.qvto.examples.pivot.imperativeocl.ImperativeLoopExp;
+import org.eclipse.qvto.examples.pivot.imperativeocl.ImperativeIterateExp;import org.eclipse.qvto.examples.pivot.imperativeocl.ImperativeLoopExp;
 import org.eclipse.qvto.examples.pivot.imperativeocl.InstantiationExp;
 import org.eclipse.qvto.examples.pivot.imperativeocl.ListLiteralExp;
 import org.eclipse.qvto.examples.pivot.imperativeocl.ListType;
@@ -36,12 +38,20 @@ import org.eclipse.qvto.examples.pivot.imperativeocl.UnpackExp;
 import org.eclipse.qvto.examples.pivot.imperativeocl.VariableInitExp;
 import org.eclipse.qvto.examples.pivot.imperativeocl.WhileExp;
 
-public class OCLPivotEvaluationVisitor extends AbstractQVToPivotVisitorImpl {
+public class OCLPivotEvaluationVisitor extends AbstractQVToPivotVisitorImpl  {
 
-	protected OCLPivotEvaluationVisitor(EvaluationEnvironment environment) {
-		super(environment);
-		
-		// TODO Auto-generated constructor stub
+
+	
+
+	protected OCLPivotEvaluationVisitor(BasicQVToExecutor basicQVToExecutor) 
+	{
+		super(basicQVToExecutor);
+
+		}
+
+	private @Nullable Transformation loadTransformation(@NonNull PivotMetamodelManager metamodelManager) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
@@ -229,5 +239,6 @@ public class OCLPivotEvaluationVisitor extends AbstractQVToPivotVisitorImpl {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 }
